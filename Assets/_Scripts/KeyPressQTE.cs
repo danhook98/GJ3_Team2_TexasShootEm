@@ -11,6 +11,7 @@ namespace TexasShootEm
         [Header("Key Press Variables")]
         [SerializeField] private int numberOfKeysToPress = 2;
         [SerializeField] private Vector2 spawnPosition = new Vector2(1.25f, 0.25f);
+        [SerializeField] private Vector2 arrowDisplayPosition = new Vector2(0.5f, 0.25f);
         [SerializeField] private float spaceBetween = 1.5f;
 
         [Header("Key Game Object")] 
@@ -22,6 +23,7 @@ namespace TexasShootEm
         
         private Camera _mainCamera;
         private Vector2 _startPosition;
+        private Vector2 _arrowDisplayPosition;
         
         private GameObject _arrowContainer;
 
@@ -33,6 +35,7 @@ namespace TexasShootEm
             
             _mainCamera = Camera.main;
             _startPosition = _mainCamera.ViewportToWorldPoint(spawnPosition);
+            _arrowDisplayPosition = _mainCamera.ViewportToWorldPoint(arrowDisplayPosition);
             
             CreateArrowContainer();
         }
@@ -80,22 +83,22 @@ namespace TexasShootEm
         {
             _arrowObjects.Clear();
             _arrowContainer.transform.position = _startPosition;
-
-            Bounds bounds = new Bounds();
             
             for (int i = 0; i < arrowsToSpawn; i++)
             {
-                Vector3 pos = _startPosition + (Vector2.right * (i * spaceBetween));
+                //Vector3 pos = _startPosition + (Vector2.right * (i * spaceBetween));
+                Vector2 pos = _startPosition + new Vector2(i * spaceBetween, 0);
                 
                 Arrow arrow = Instantiate(arrowPrefab, transform);
                 arrow.SetPosition(pos);
-                bounds.Encapsulate(arrow.GetBounds());
                 arrow.transform.SetParent(_arrowContainer.transform);
                 
                 _arrowObjects.Add(arrow);
             }
+
+            float centerX = ((arrowsToSpawn - 1) * spaceBetween) / 2;
             
-            _arrowContainer.transform.position = Vector3.zero - bounds.center;
+            _arrowContainer.transform.position = _arrowDisplayPosition - new Vector2(centerX, 0f);
         }
 
         private void CreateArrowContainer()
