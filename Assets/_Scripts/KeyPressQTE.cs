@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,6 +11,7 @@ namespace TexasShootEm
         [Header("Key Press Variables")]
         [SerializeField] private int numberOfKeysToPress = 2;
         [SerializeField] private Vector2 spawnPosition = new Vector2(1.25f, 0.25f);
+        [SerializeField] private float spaceBetween = 1.5f;
 
         [Header("Key Game Object")] 
         [SerializeField] private Arrow arrowPrefab;
@@ -20,6 +22,8 @@ namespace TexasShootEm
         
         private Camera _mainCamera;
         private Vector2 _startPosition;
+        
+        private GameObject _arrowContainer;
 
         private void Awake()
         {
@@ -29,6 +33,8 @@ namespace TexasShootEm
             
             _mainCamera = Camera.main;
             _startPosition = _mainCamera.ViewportToWorldPoint(spawnPosition);
+            
+            CreateArrowContainer();
         }
 
         private void OnEnable() => inputReader.OnDirectionalEvent += KeyPress;
@@ -73,14 +79,30 @@ namespace TexasShootEm
         private void SpawnArrows(int arrowsToSpawn)
         {
             _arrowObjects.Clear();
+            _arrowContainer.transform.position = _startPosition;
 
+            Bounds bounds = new Bounds();
+            
             for (int i = 0; i < arrowsToSpawn; i++)
             {
-                Vector3 pos = _startPosition + (Vector2.right * i);
+                Vector3 pos = _startPosition + (Vector2.right * (i * spaceBetween));
+                
                 Arrow arrow = Instantiate(arrowPrefab, transform);
                 arrow.SetPosition(pos);
+                bounds.Encapsulate(arrow.GetBounds());
+                arrow.transform.SetParent(_arrowContainer.transform);
+                
                 _arrowObjects.Add(arrow);
             }
+            
+            _arrowContainer.transform.position = Vector3.zero - bounds.center;
+        }
+
+        private void CreateArrowContainer()
+        {
+            _arrowContainer = new GameObject();
+            _arrowContainer.transform.SetParent(transform);
+            _arrowContainer.name = "ArrowContainer";
         }
     }
 }
