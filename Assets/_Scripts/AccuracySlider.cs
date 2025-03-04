@@ -8,13 +8,12 @@ public class AccuracySlider : MonoBehaviour
     [SerializeField] private Slider accuracySlider;
     [SerializeField] private AnimationCurve lerpCurve;
     
-    [SerializeField] private float baseValueChange = 0.05f;
+    [SerializeField] private float _difficultyMultiplier = 0.25f;
     
     private float _accuracyScore;
     private float _accuracySliderValue;
     private float _valueChange; 
     private float _sliderSpeed;
-    private float _difficultyMultiplier = 1f;
     private bool _isSliderPaused;
     
     private Dictionary<string, float> scoreResults = new Dictionary<string, float>();
@@ -26,7 +25,6 @@ public class AccuracySlider : MonoBehaviour
     
     private void Start()
     {
-        _valueChange = baseValueChange * _difficultyMultiplier;
         _isSliderPaused = false;
         AddNewScoreResults();
     }
@@ -67,21 +65,15 @@ public class AccuracySlider : MonoBehaviour
             ResetAccuracySlider();
         }
     }
-
-    private void FixedUpdate()
-    {
-        accuracySlider.value = Mathf.Clamp(accuracySlider.value + _sliderSpeed, -1f, 1f);
-    }
     
     public void SetDifficulty(float newMultiplier)
     {
         _difficultyMultiplier = newMultiplier;
-        _valueChange = baseValueChange * _difficultyMultiplier; 
     }
 
     private void CalculateValueChange()
     {
-        float pingPongValue = Mathf.PingPong(Time.time * 0.5f, accuracySlider.maxValue);
+        float pingPongValue = Mathf.PingPong(Time.time * _difficultyMultiplier, accuracySlider.maxValue);
         _valueChange = lerpCurve.Evaluate(pingPongValue);
         accuracySlider.value = _valueChange;
     }
