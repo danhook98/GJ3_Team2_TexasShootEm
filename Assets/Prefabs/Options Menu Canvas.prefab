@@ -209,6 +209,7 @@ GameObject:
   - component: {fileID: 3793727905668473589}
   - component: {fileID: 4877978910703279333}
   - component: {fileID: 452935803878989824}
+  - component: {fileID: 6428007823094997758}
   m_Layer: 5
   m_Name: Options Menu Canvas
   m_TagString: Untagged
@@ -301,6 +302,34 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &6428007823094997758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7112739961592985066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 171f2bcb00b54b50808b2844986c155a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToListen: {fileID: 11400000, guid: cfbc4c5fd4cc1c841b56329189a26839, type: 2}
+  onEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3793727905668473589}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7810802654843873899
 GameObject:
   m_ObjectHideFlags: 0
@@ -447,6 +476,7 @@ GameObject:
   - component: {fileID: 5721674140642663864}
   - component: {fileID: 3840586934610315660}
   - component: {fileID: 767032411747312027}
+  - component: {fileID: 4757130025426083634}
   m_Layer: 5
   m_Name: Back Button
   m_TagString: Untagged
@@ -556,21 +586,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 3793727905668473589}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
+      - m_Target: {fileID: 4757130025426083634}
+        m_TargetAssemblyTypeName: TexasShootEm.EventSystem.AbstractEventTrigger`1[[System.Boolean,
+          mscorlib
+        m_MethodName: Trigger
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -580,6 +599,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &4757130025426083634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8689640237852372602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a094bcdc19c41c5b00b500f878565fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToTrigger: {fileID: 11400000, guid: cfbc4c5fd4cc1c841b56329189a26839, type: 2}
 --- !u!1 &9186396164902942014
 GameObject:
   m_ObjectHideFlags: 0

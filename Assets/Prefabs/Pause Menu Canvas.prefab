@@ -221,6 +221,7 @@ GameObject:
   - component: {fileID: 4181911918847255795}
   - component: {fileID: 5749843413377766890}
   - component: {fileID: 3129905787304356441}
+  - component: {fileID: 7115296401063021263}
   m_Layer: 5
   m_Name: Options Button
   m_TagString: Untagged
@@ -330,6 +331,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 7115296401063021263}
+        m_TargetAssemblyTypeName: TexasShootEm.EventSystem.AbstractEventTrigger`1[[System.Boolean,
+          mscorlib
+        m_MethodName: Trigger
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 1087106369779056573}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
@@ -342,18 +356,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+--- !u!114 &7115296401063021263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799953679415566963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a094bcdc19c41c5b00b500f878565fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToTrigger: {fileID: 11400000, guid: cfbc4c5fd4cc1c841b56329189a26839, type: 2}
 --- !u!1 &1950054437132883363
 GameObject:
   m_ObjectHideFlags: 0
@@ -1388,17 +1403,17 @@ MonoBehaviour:
   onEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8603592085364683047}
-        m_TargetAssemblyTypeName: TexasShootEm.PauseMenuUI, Assembly-CSharp
-        m_MethodName: LoadOptionsMenu
-        m_Mode: 0
+      - m_Target: {fileID: 1087106369779056573}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &3613147965757221508
 MonoBehaviour:

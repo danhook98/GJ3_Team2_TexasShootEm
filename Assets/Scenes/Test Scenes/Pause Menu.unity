@@ -335,10 +335,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 767032411747312027, guid: cfc725dbe148dff4c89718c314fb1698, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 7949391927287893076}
     - target: {fileID: 1146865312862791826, guid: cfc725dbe148dff4c89718c314fb1698, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -428,11 +424,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfc725dbe148dff4c89718c314fb1698, type: 3}
---- !u!223 &1087106368561570941 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 3793727905668473589, guid: cfc725dbe148dff4c89718c314fb1698, type: 3}
-  m_PrefabInstance: {fileID: 323609299730244329}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7949391927287893066
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -521,10 +512,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3129905787304356441, guid: ec8d1c7cd51cabf4695ad353e3fd6057, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1087106368561570941}
     - target: {fileID: 6611455497442047819, guid: ec8d1c7cd51cabf4695ad353e3fd6057, type: 3}
       propertyPath: m_Name
       value: Pause Menu Canvas
@@ -534,11 +521,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec8d1c7cd51cabf4695ad353e3fd6057, type: 3}
---- !u!223 &7949391927287893076 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 1087106369779056573, guid: ec8d1c7cd51cabf4695ad353e3fd6057, type: 3}
-  m_PrefabInstance: {fileID: 7949391927287893066}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
