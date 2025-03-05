@@ -14,9 +14,7 @@ namespace TexasShootEm
         [SerializeField] private float difficultyMultiplier = 0.25f;
     
         private float _accuracyScore;
-        private float _accuracySliderValue;
         private float _valueChange; 
-        private float _sliderSpeed;
         private bool _isSliderPaused;
     
         private Dictionary<string, float> scoreResults;
@@ -54,28 +52,16 @@ namespace TexasShootEm
         {
             // For scoring, score ranges from 0 to 1, closer to the middle of the bar closer to a value of 1.
             _isSliderPaused = true;
+            
+            float absoluteValue = Mathf.Abs(accuracySlider.value);
         
-            // Calculate score when slider value is above or below the halfway mark.
-            if (accuracySlider.value > 0.5f)
-            {
-                _accuracySliderValue = accuracySlider.value;
-                _accuracySliderValue -= 0.5f;
-                _accuracySliderValue = 1 - (2 * _accuracySliderValue);
-            }
-
-            if (accuracySlider.value < 0.5f)
-            {
-                _accuracySliderValue = accuracySlider.value;
-                _accuracySliderValue = 2 * _accuracySliderValue;
-            }
-        
-            _accuracyScore = _accuracySliderValue;
+            _accuracyScore = 1 - absoluteValue;
             Debug.Log(_accuracyScore);
         }
 
         private void CalculateValueChange()
         {
-            float pingPongValue = Mathf.PingPong(Time.time * difficultyMultiplier, accuracySlider.maxValue);
+            float pingPongValue = Mathf.PingPong(Time.time * difficultyMultiplier, accuracySlider.maxValue + 1) -1;
             _valueChange = lerpCurve.Evaluate(pingPongValue);
             accuracySlider.value = _valueChange;
         }
