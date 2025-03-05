@@ -7,7 +7,6 @@ namespace TexasShootEm
 {
     public class PauseMenuUI : MonoBehaviour
     {
-        [SerializeField] private Canvas optionsCanvas;
         [SerializeField] private Canvas pauseCanvas;
         
         public void RestartCurrentLevel()
@@ -28,7 +27,5 @@ namespace TexasShootEm
             pauseCanvas.enabled = isPaused;
             Time.timeScale = isPaused ? 0 : 1;
         }
-        
-        public void LoadOptionsMenu(bool isOptionsOn) => optionsCanvas.enabled = isOptionsOn;
     }
 }
