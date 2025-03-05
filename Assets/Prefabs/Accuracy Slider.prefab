@@ -324,8 +324,8 @@ RectTransform:
   m_GameObject: {fileID: 9216591534600088936}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 5.06, y: 5.06, z: 5.06}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5492715178603814346}
   - {fileID: 1865553286345443321}
@@ -381,10 +381,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 2908017441618678153}
   m_HandleRect: {fileID: 2604184262709610390}
   m_Direction: 0
-  m_MinValue: -1
+  m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: -0.946
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -405,32 +405,24 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0.0012817383
-      value: 0.0049095154
-      inSlope: 4.4741716
-      outSlope: 4.4741716
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.035940945
+      outWeight: 0
     - serializedVersion: 3
-      time: 0.5
+      time: 1
       value: 1
-      inSlope: -0.0053893924
-      outSlope: -0.0053893924
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.9935913
-      value: 0.009819031
-      inSlope: -4.6889234
-      outSlope: -4.6889234
+      inSlope: 0
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.031115476
+      inWeight: 0
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  _difficultyMultiplier: 0.25
