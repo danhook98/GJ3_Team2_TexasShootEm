@@ -400,6 +400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0af9f765d79b1742b6a565a82658237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputReader: {fileID: 11400000, guid: 1fca4445773370446a46be614455a663, type: 2}
   accuracySlider: {fileID: 8816866920535007566}
   lerpCurve:
     serializedVersion: 2
@@ -425,4 +426,4 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _difficultyMultiplier: 0.25
+  difficultyMultiplier: 0.25
