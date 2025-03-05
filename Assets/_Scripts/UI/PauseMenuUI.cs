@@ -2,21 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 namespace TexasShootEm
 {
     public class PauseMenuUI : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
+        public void RestartCurrentLevel()
         {
-        
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
-        // Update is called once per frame
-        void Update()
+        public void GoToMainMenu()
         {
-        
+            SceneManager.LoadScene("MainMenu");
         }
+        
+        public void PauseGame(bool isPaused) => Time.timeScale = isPaused ? 0 : 1;
     }
 }
