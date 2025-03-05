@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd235f5fe081b2f40bb1547f3b7cff25, type: 3}
   m_Name: Countdown
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: 14c83e8f9af4b5e45bab4acdaa51e655, type: 3}
+  clip: {fileID: 8300000, guid: f4582d39647c7f54680705234d9c4a84, type: 3}
