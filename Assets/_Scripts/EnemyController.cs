@@ -1,16 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TexasShootEm.EventSystem;
 
 namespace TexasShootEm
 {
     public class EnemyController : MonoBehaviour
     {
+        [Header("Events")]
+        [SerializeField] private VoidEvent shoot;
+        [SerializeField] private VoidEvent death;
+        
         private GameObject _evilTubbo;
+        private GameObject _audioManager;
         
         private void Start()
         {
             _evilTubbo = GameObject.FindWithTag("Enemy");
+            _audioManager = GameObject.FindWithTag("Audio");
         }
 
         private void Update()
@@ -50,5 +57,7 @@ namespace TexasShootEm
          * 4. Set isNotShooting to true so EvilTubbo goes back to his default state
          *
          */
+        
+        //Sounds needed: Gunshot, DeathSound
     }
 }
