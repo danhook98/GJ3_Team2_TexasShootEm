@@ -24,7 +24,6 @@ namespace TexasShootEm
 
         public override void OnInspectorGUI()
         {
-            LevelSO script = (LevelSO) target;
             
             // Display the base inspector GUI.
             base.OnInspectorGUI();
@@ -35,12 +34,9 @@ namespace TexasShootEm
             selectedIndex = EditorGUILayout.Popup("Difficulty", selectedIndex, difficultyList);
             
             // Update the difficulty property string text with what was selected.
-            //_difficultyProperty.stringValue = difficultyList[selectedIndex];
+            _difficultyProperty.stringValue = difficultyList[selectedIndex];
 
             serializedObject.ApplyModifiedProperties();
-            
-            script.Difficulty = difficultyList[selectedIndex];
-            Debug.Log(script.Difficulty);
         }
     }
 }
