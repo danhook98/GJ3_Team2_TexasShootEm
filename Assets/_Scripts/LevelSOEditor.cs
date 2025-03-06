@@ -1,5 +1,6 @@
 using System;
 using UnityEditor;
+using UnityEngine;
 
 namespace TexasShootEm
 {
@@ -17,6 +18,8 @@ namespace TexasShootEm
             
             // Ensure that the index of the dropdown is the same as what's saved in the LevelSO data.
             selectedIndex = Array.IndexOf(difficultyList, _difficultyProperty.stringValue);
+            
+            if (selectedIndex == -1) selectedIndex = 0;
         }
 
         public override void OnInspectorGUI()
