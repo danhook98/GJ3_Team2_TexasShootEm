@@ -15,8 +15,7 @@ namespace TexasShootEm
 
         private void Start()
         {
-            var evilTubbo = GameObject.FindWithTag("Enemy");
-            _evilTubboAnim = evilTubbo.GetComponent<Animator>();
+            _evilTubboAnim = GetComponent<Animator>();
         }
 
         private void Update() // TODO: Remove this, this is here only for testing purposes.
