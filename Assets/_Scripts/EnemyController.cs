@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TexasShootEm.EventSystem;
 
@@ -7,12 +6,13 @@ namespace TexasShootEm
 {
     public class EnemyController : MonoBehaviour
     {
-        [Header("Events")]
+        [Header("Events")] 
         [SerializeField] private VoidEvent shoot;
         [SerializeField] private VoidEvent death;
-        
+
         private Animator _evilTubboAnim;
-        
+        private bool _isDead = false;
+
         private void Start()
         {
             var evilTubbo = GameObject.FindWithTag("Enemy");
@@ -31,35 +31,27 @@ namespace TexasShootEm
                 StartCoroutine(Death());
             }
         }
-        
+
         public IEnumerator Shoot()
         {
-            Debug.Log("Starting shoot coroutine");
-            yield return null;
+            if (!_isDead)
+            {
+                Debug.Log("Starting shoot coroutine");
+                _evilTubboAnim.SetTrigger("Shoot");
+                yield return new WaitForSeconds(0.5f);
+                shoot.Invoke(new Empty());
+                yield return new WaitForSeconds(0.5f);
+            }
         }
 
         public IEnumerator Death()
         {
+            _isDead = true;
             Debug.Log("Starting death coroutine");
             _evilTubboAnim.SetTrigger("Death");
             death.Invoke(new Empty());
             yield return new WaitForSeconds(0.7f);
             _evilTubboAnim.SetTrigger("StayDead");
         }
-        /*
-         *  Death Coroutine
-         * 1. Set isDead to true through the evil Tubbo animator
-         * 2. Play relevant SFX & Music using the Audio Manager
-         * 3. Wait until animation finishes
-         *
-         * Shoot Coroutine
-         * 1. Trigger Shoot using the animation controller, set isNotShooting to false
-         * 2. Play relevant SFX & Music using the Audio Manager
-         * 3. Wait until animation finishes
-         * 4. Set isNotShooting to true so EvilTubbo goes back to his default state
-         *
-         */
-        
-        //Sounds needed: Gunshot, DeathSound
     }
 }
