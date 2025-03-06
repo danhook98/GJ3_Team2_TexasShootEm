@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Level10
   m_EditorClassIdentifier: 
   LevelNumber: 10
-  Difficulty: Beginner
+  Difficulty: Intermediate
