@@ -11,13 +11,12 @@ namespace TexasShootEm
         [SerializeField] private VoidEvent shoot;
         [SerializeField] private VoidEvent death;
         
-        private GameObject _evilTubbo;
-        private GameObject _audioManager;
+        private Animator _evilTubboAnim;
         
         private void Start()
         {
-            _evilTubbo = GameObject.FindWithTag("Enemy");
-            _audioManager = GameObject.FindWithTag("Audio");
+            var evilTubbo = GameObject.FindWithTag("Enemy");
+            _evilTubboAnim = evilTubbo.GetComponent<Animator>();
         }
 
         private void Update()
@@ -42,7 +41,9 @@ namespace TexasShootEm
         public IEnumerator Death()
         {
             Debug.Log("Starting death coroutine");
-            yield return null;
+            _evilTubboAnim.SetTrigger("Death");
+            death.Invoke(new Empty());
+            yield return new WaitForSeconds(1f);
         }
         /*
          *  Death Coroutine
