@@ -19,7 +19,7 @@ namespace TexasShootEm
             _evilTubboAnim = evilTubbo.GetComponent<Animator>();
         }
 
-        private void Update()
+        private void Update() // TODO: Remove this, this is here only for testing purposes.
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -43,7 +43,8 @@ namespace TexasShootEm
             Debug.Log("Starting death coroutine");
             _evilTubboAnim.SetTrigger("Death");
             death.Invoke(new Empty());
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.7f);
+            _evilTubboAnim.SetTrigger("StayDead");
         }
         /*
          *  Death Coroutine
