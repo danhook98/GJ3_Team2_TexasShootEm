@@ -42,11 +42,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -3222060307068922339, guid: df1c22c0fb1b0fd4ab546e2efb061e96, type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 89c12cc74c07f964e892f5e544a19c13, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -140,6 +140,8 @@ GameObject:
   - component: {fileID: 6219241646105901813}
   - component: {fileID: 6263605720021997954}
   - component: {fileID: 5521016249071812338}
+  - component: {fileID: 8334512003901713662}
+  - component: {fileID: 8936929382527498915}
   m_Layer: 0
   m_Name: Audio Manager
   m_TagString: Audio
@@ -230,6 +232,62 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8334512003901713662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5934738281344533260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 846db8c63b964fa98a32f2478749d3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToListen: {fileID: 11400000, guid: a36452a17bbd01743b68fbc1aa4434d4, type: 2}
+  onEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6219241646105901813}
+        m_TargetAssemblyTypeName: TexasShootEm.AudioManager, Assembly-CSharp
+        m_MethodName: PlayOneShotSFX
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 8e7bcf5498f1fdb4e83e0b827418cb04, type: 2}
+          m_ObjectArgumentAssemblyTypeName: TexasShootEm.AudioClipSO, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8936929382527498915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5934738281344533260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 846db8c63b964fa98a32f2478749d3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToListen: {fileID: 11400000, guid: fae6a77b6b3a9c749ac73283e8008dcb, type: 2}
+  onEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6219241646105901813}
+        m_TargetAssemblyTypeName: TexasShootEm.AudioManager, Assembly-CSharp
+        m_MethodName: PlayOneShotSFX
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 9d59716d71c965943bb5347625321701, type: 2}
+          m_ObjectArgumentAssemblyTypeName: TexasShootEm.AudioClipSO, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
