@@ -6,16 +6,37 @@ namespace TexasShootEm
 {
     public class EnemyController : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
-        {
+        private GameObject _evilTubbo;
         
+        // Start is called before the first frame update
+        private void Start()
+        {
+            _evilTubbo = GameObject.FindWithTag("Enemy");
         }
 
-        // Update is called once per frame
-        void Update()
+        private void Update()
         {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                StartCoroutine(Shoot());
+            }
+
+            if (Input.GetKeyDown(KeyCode.T))
+            {
+                StartCoroutine(Death());
+            }
+        }
         
+        public IEnumerator Shoot()
+        {
+            Debug.Log("Starting shoot coroutine");
+            yield return null;
+        }
+
+        public IEnumerator Death()
+        {
+            Debug.Log("Starting death coroutine");
+            yield return null;
         }
     }
 }
