@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8216441966312065695}
   - component: {fileID: 6797274853439697159}
   - component: {fileID: 5427951654398586530}
+  - component: {fileID: 3132041751933958851}
   m_Layer: 5
   m_Name: Level Template
   m_TagString: Untagged
@@ -105,6 +106,23 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &3132041751933958851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2871315190931988662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7135b9fa20eec3429075ae1667cc0b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelSO: {fileID: 0}
+  titleText: {fileID: 4176859651641954163}
+  difficultyText: {fileID: 1134050837882536509}
+  playButton: {fileID: 8014429458777752102}
+  buttonText: {fileID: 3835344003648541754}
 --- !u!1 &2979805036756752225
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,7 +494,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 1}
     m_PressedColor: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:

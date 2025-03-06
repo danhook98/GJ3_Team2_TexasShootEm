@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelNumber: 1
   Difficulty: Beginner
+  Unlocked: 1

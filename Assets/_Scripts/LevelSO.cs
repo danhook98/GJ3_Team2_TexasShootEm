@@ -9,7 +9,7 @@ namespace TexasShootEm
 
         [HideInInspector]
         public string Difficulty;
-
-        private bool _unlocked = false;
+        
+        public bool Unlocked = false;
     }
 }
