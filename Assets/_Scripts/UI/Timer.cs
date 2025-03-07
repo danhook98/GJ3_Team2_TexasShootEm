@@ -15,7 +15,22 @@ namespace TexasShootEm
         // Update is called once per frame
         void Update()
         {
-        
+            // IF timer reaches 0, invoke GameOver game event.
+        }
+
+        public void SetTimeLimit(float time)
+        {
+            
+        }
+
+        public void StartTimer()
+        {
+            
+        }
+
+        public void ModifyTimer(float time)
+        {
+            
         }
     }
 }
