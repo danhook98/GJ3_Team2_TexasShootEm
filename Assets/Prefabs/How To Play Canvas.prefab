@@ -436,12 +436,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Texas Shoot 'Em is a twitch skill mastery game. It's all about being patient
     and practising the few skills given to beat the increasingly more challenging
-    levels. \n\nOnce the SFX countdown is over, the timer will begin counting down
-    on the screen. Your goal is to get the best result possible in the two mechanics
-    that may pop up. \n\nFor the accuracy slider, you must try to land the indicator
-    as close to the middle as possible by pressing 'Spacebar'. For the direction
-    indicators that appear on the screen, you must press W, A, S or D for each corresponding
-    arrow: Up, Left, Down, Right."
+    levels. \r\n\r\nThe game begins after an audible countdown. Your goal is to kill
+    your opponent by getting the best results possible in the two mechanics that
+    may pop up before they are able to react.\r\n\r\nFor the accuracy slider, you
+    must try to land the indicator as close to the middle as possible by pressing
+    'Spacebar'. For the direction indicators that appear on the screen, you must
+    press W, A, S and D or the Up arrow, Left arrow, Down arrow and Right arrow for
+    each corresponding arrow: Up, Left, Down, Right."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
