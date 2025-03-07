@@ -39,6 +39,11 @@ namespace TexasShootEm
                 }
             }
             
+            if (_timer > 0)
+            {
+                _hasTimerExpired = false;
+            }
+            
             // TODO: Remove these, they only exist for testing purposes.
             if (Input.GetKeyDown(KeyCode.Space))
             {
