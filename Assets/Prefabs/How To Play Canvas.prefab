@@ -438,10 +438,9 @@ MonoBehaviour:
     and practising the few skills given to beat the increasingly more challenging
     levels. \n\nOnce the SFX countdown is over, the timer will begin counting down
     on the screen. Your goal is to get the best result possible in the two mechanics
-    that may pop up. These mechanics will pop up 3 times per level and get increasingly
-    harder. \n\nFor the accuracy slider, you must try to land the indicator as close
-    to the middle as possible by pressing 'Spacebar'. For the direction indicators
-    that appear on the screen, you must press W, A, S or D for each corresponding
+    that may pop up. \n\nFor the accuracy slider, you must try to land the indicator
+    as close to the middle as possible by pressing 'Spacebar'. For the direction
+    indicators that appear on the screen, you must press W, A, S or D for each corresponding
     arrow: Up, Left, Down, Right."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -563,7 +562,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5845104577726023433}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
