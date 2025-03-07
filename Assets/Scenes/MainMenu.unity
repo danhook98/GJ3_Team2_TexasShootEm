@@ -122,6 +122,24 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &78960006 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1898834138139773471, guid: 1e957e664e699c3448bd19fdffeed72d, type: 3}
+  m_PrefabInstance: {fileID: 1277624823}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &78960012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78960006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36c627e0e8f149c6b5822d32acda4f5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToTrigger: {fileID: 11400000, guid: 2f29abf1cb4005049a74bd3f32608ea6, type: 2}
 --- !u!1 &128465651
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,6 +282,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1440851691}
     m_Modifications:
+    - target: {fileID: 767032411747312027, guid: cfc725dbe148dff4c89718c314fb1698, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 767032411747312027, guid: cfc725dbe148dff4c89718c314fb1698, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 767032411747312027, guid: cfc725dbe148dff4c89718c314fb1698, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1159659471}
+    - target: {fileID: 767032411747312027, guid: cfc725dbe148dff4c89718c314fb1698, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 767032411747312027, guid: cfc725dbe148dff4c89718c314fb1698, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Trigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 767032411747312027, guid: cfc725dbe148dff4c89718c314fb1698, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: TexasShootEm.EventSystem.VoidEventTrigger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 767032411747312027, guid: cfc725dbe148dff4c89718c314fb1698, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1146865312862791826, guid: cfc725dbe148dff4c89718c314fb1698, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -352,6 +398,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2848792004924400064, guid: cfc725dbe148dff4c89718c314fb1698, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5966849184599494881, guid: cfc725dbe148dff4c89718c314fb1698, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -363,6 +413,10 @@ PrefabInstance:
     - target: {fileID: 7112739961592985066, guid: cfc725dbe148dff4c89718c314fb1698, type: 3}
       propertyPath: m_Name
       value: Options Menu Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7207982829347739495, guid: cfc725dbe148dff4c89718c314fb1698, type: 3}
+      propertyPath: m_Value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7729050267614703154, guid: cfc725dbe148dff4c89718c314fb1698, type: 3}
       propertyPath: m_AnchorMax.x
@@ -391,7 +445,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8689640237852372602, guid: cfc725dbe148dff4c89718c314fb1698, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1159659471}
   m_SourcePrefab: {fileID: 100100000, guid: cfc725dbe148dff4c89718c314fb1698, type: 3}
 --- !u!224 &205580706 stripped
 RectTransform:
@@ -613,6 +670,7 @@ GameObject:
   - component: {fileID: 320152441}
   - component: {fileID: 320152440}
   - component: {fileID: 320152443}
+  - component: {fileID: 320152444}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -709,6 +767,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 320152444}
+        m_TargetAssemblyTypeName: TexasShootEm.EventSystem.VoidEventTrigger, Assembly-CSharp
+        m_MethodName: Trigger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &320152441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -760,6 +830,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventToTrigger: {fileID: 11400000, guid: 23a7e1cb6c2bc314783da6bf3f4c3b7d, type: 2}
+--- !u!114 &320152444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320152438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36c627e0e8f149c6b5822d32acda4f5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToTrigger: {fileID: 11400000, guid: 2f29abf1cb4005049a74bd3f32608ea6, type: 2}
 --- !u!1 &406158496
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,6 +856,7 @@ GameObject:
   - component: {fileID: 406158499}
   - component: {fileID: 406158498}
   - component: {fileID: 406158501}
+  - component: {fileID: 406158502}
   m_Layer: 5
   m_Name: Options Button
   m_TagString: Untagged
@@ -869,6 +953,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 406158502}
+        m_TargetAssemblyTypeName: TexasShootEm.EventSystem.VoidEventTrigger, Assembly-CSharp
+        m_MethodName: Trigger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &406158499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -920,6 +1016,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventToTrigger: {fileID: 11400000, guid: cfbc4c5fd4cc1c841b56329189a26839, type: 2}
+--- !u!114 &406158502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406158496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36c627e0e8f149c6b5822d32acda4f5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToTrigger: {fileID: 11400000, guid: 2f29abf1cb4005049a74bd3f32608ea6, type: 2}
 --- !u!224 &408759651 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6340232455284137789, guid: a463e9c38daaacd4ca9ef39d75ee7506, type: 3}
@@ -1173,7 +1282,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5934738281344533260, guid: 4fd2b91b4174aa045b8dcd869d62199a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1958518501}
   m_SourcePrefab: {fileID: 100100000, guid: 4fd2b91b4174aa045b8dcd869d62199a, type: 3}
 --- !u!1 &619394800
 GameObject:
@@ -1344,6 +1456,7 @@ GameObject:
   - component: {fileID: 892334668}
   - component: {fileID: 892334667}
   - component: {fileID: 892334666}
+  - component: {fileID: 892334669}
   m_Layer: 5
   m_Name: Quit Button
   m_TagString: Untagged
@@ -1427,6 +1540,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 892334669}
+        m_TargetAssemblyTypeName: TexasShootEm.EventSystem.VoidEventTrigger, Assembly-CSharp
+        m_MethodName: Trigger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &892334667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1465,6 +1590,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892334664}
   m_CullTransparentMesh: 1
+--- !u!114 &892334669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892334664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36c627e0e8f149c6b5822d32acda4f5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToTrigger: {fileID: 11400000, guid: 2f29abf1cb4005049a74bd3f32608ea6, type: 2}
 --- !u!1 &981765703
 GameObject:
   m_ObjectHideFlags: 0
@@ -1599,6 +1737,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 981765703}
   m_CullTransparentMesh: 1
+--- !u!1 &1159659465 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8689640237852372602, guid: cfc725dbe148dff4c89718c314fb1698, type: 3}
+  m_PrefabInstance: {fileID: 205580705}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1159659471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159659465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36c627e0e8f149c6b5822d32acda4f5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToTrigger: {fileID: 11400000, guid: 2f29abf1cb4005049a74bd3f32608ea6, type: 2}
 --- !u!1001 &1277624823
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1607,6 +1763,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1440851691}
     m_Modifications:
+    - target: {fileID: 2512795108543348685, guid: 1e957e664e699c3448bd19fdffeed72d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2512795108543348685, guid: 1e957e664e699c3448bd19fdffeed72d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2512795108543348685, guid: 1e957e664e699c3448bd19fdffeed72d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 78960012}
+    - target: {fileID: 2512795108543348685, guid: 1e957e664e699c3448bd19fdffeed72d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2512795108543348685, guid: 1e957e664e699c3448bd19fdffeed72d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Trigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 2512795108543348685, guid: 1e957e664e699c3448bd19fdffeed72d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: TexasShootEm.EventSystem.VoidEventTrigger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2512795108543348685, guid: 1e957e664e699c3448bd19fdffeed72d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3573517045313514087, guid: 1e957e664e699c3448bd19fdffeed72d, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1698,7 +1882,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1898834138139773471, guid: 1e957e664e699c3448bd19fdffeed72d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 78960012}
   m_SourcePrefab: {fileID: 100100000, guid: 1e957e664e699c3448bd19fdffeed72d, type: 3}
 --- !u!224 &1277624824 stripped
 RectTransform:
@@ -1852,6 +2039,7 @@ GameObject:
   - component: {fileID: 1348007810}
   - component: {fileID: 1348007809}
   - component: {fileID: 1348007812}
+  - component: {fileID: 1348007813}
   m_Layer: 5
   m_Name: HTP Button
   m_TagString: Untagged
@@ -1948,6 +2136,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1348007813}
+        m_TargetAssemblyTypeName: TexasShootEm.EventSystem.VoidEventTrigger, Assembly-CSharp
+        m_MethodName: Trigger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1348007810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1999,6 +2199,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventToTrigger: {fileID: 11400000, guid: b9d4234d0ce78a744a72ec2ec12c9452, type: 2}
+--- !u!114 &1348007813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348007807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36c627e0e8f149c6b5822d32acda4f5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToTrigger: {fileID: 11400000, guid: 2f29abf1cb4005049a74bd3f32608ea6, type: 2}
 --- !u!1 &1440851690
 GameObject:
   m_ObjectHideFlags: 0
@@ -2980,10 +3193,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5173033631816427893, guid: a463e9c38daaacd4ca9ef39d75ee7506, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5301136779185178332, guid: a463e9c38daaacd4ca9ef39d75ee7506, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3585,6 +3794,50 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a463e9c38daaacd4ca9ef39d75ee7506, type: 3}
+--- !u!1 &1958518494 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5934738281344533260, guid: 4fd2b91b4174aa045b8dcd869d62199a, type: 3}
+  m_PrefabInstance: {fileID: 569065980}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1958518499 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6219241646105901813, guid: 4fd2b91b4174aa045b8dcd869d62199a, type: 3}
+  m_PrefabInstance: {fileID: 569065980}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958518494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff893f055659b540888edf821aefc0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1958518501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958518494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 846db8c63b964fa98a32f2478749d3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToListen: {fileID: 11400000, guid: 2f29abf1cb4005049a74bd3f32608ea6, type: 2}
+  onEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1958518499}
+        m_TargetAssemblyTypeName: TexasShootEm.AudioManager, Assembly-CSharp
+        m_MethodName: PlayOneShotSFX
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 9d59716d71c965943bb5347625321701, type: 2}
+          m_ObjectArgumentAssemblyTypeName: TexasShootEm.AudioClipSO, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
