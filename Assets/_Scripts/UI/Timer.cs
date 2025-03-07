@@ -11,10 +11,13 @@ namespace TexasShootEm
         private float _timer = 30f; // TODO: Set this to 0 after testing.
         private TextMeshProUGUI _timerText;
         private bool _isCountingDown;
+        private bool _hasTimerExpired;
         
         void Start()
         {
             _timerText = GetComponent<TextMeshProUGUI>();
+            _hasTimerExpired = false;
+            _isCountingDown = false;
         }
         
         void Update()
@@ -29,7 +32,11 @@ namespace TexasShootEm
             // IF timer reaches 0, invoke GameOver game event.
             if (_timer <= 0)
             {
-                onGameOverEvent.Invoke(new Empty());
+                _hasTimerExpired = true;
+                if (_hasTimerExpired)
+                {
+                    onGameOverEvent.Invoke(new Empty());
+                }
             }
             
             // TODO: Remove these, they only exist for testing purposes.
