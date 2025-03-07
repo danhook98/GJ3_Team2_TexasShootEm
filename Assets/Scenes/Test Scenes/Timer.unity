@@ -434,6 +434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ea44bd0b994b034e90607af632a5ae1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onGameOverEvent: {fileID: 11400000, guid: 38e59852404af2147acef58f6ea93373, type: 2}
 --- !u!1001 &8286684064556895277
 PrefabInstance:
   m_ObjectHideFlags: 0
