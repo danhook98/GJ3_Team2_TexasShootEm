@@ -210,7 +210,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8847639808803440408}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
@@ -523,9 +523,7 @@ GameObject:
   - component: {fileID: 8847639808803440408}
   - component: {fileID: 880542673535084311}
   - component: {fileID: 4780418985933297576}
-  - component: {fileID: 2335008619696885747}
-  - component: {fileID: 2702567987192712012}
-  - component: {fileID: 7341564073518243704}
+  - component: {fileID: 4606863829047822427}
   m_Layer: 5
   m_Name: How To Play Canvas
   m_TagString: Untagged
@@ -619,7 +617,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &2335008619696885747
+--- !u!114 &4606863829047822427
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -628,57 +626,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 5845104577726023433}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3106f978f764a384484e1c0c5496b3f4, type: 3}
+  m_Script: {fileID: 11500000, guid: 171f2bcb00b54b50808b2844986c155a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2702567987192712012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5845104577726023433}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 846db8c63b964fa98a32f2478749d3ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventToListen: {fileID: 11400000, guid: 5027d0bda4431c04ab0080d403364b69, type: 2}
+  eventToListen: {fileID: 11400000, guid: b9d4234d0ce78a744a72ec2ec12c9452, type: 2}
   onEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2335008619696885747}
-        m_TargetAssemblyTypeName: TexasShootEm.RuntimeUI, Assembly-CSharp
-        m_MethodName: RestartCurrentLevel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &7341564073518243704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5845104577726023433}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 846db8c63b964fa98a32f2478749d3ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventToListen: {fileID: 11400000, guid: 895cc02ff5cd3db469f8037eed6ee47d, type: 2}
-  onEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2335008619696885747}
-        m_TargetAssemblyTypeName: TexasShootEm.RuntimeUI, Assembly-CSharp
-        m_MethodName: GoToMainMenu
-        m_Mode: 1
+      - m_Target: {fileID: 8847639808803440408}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
