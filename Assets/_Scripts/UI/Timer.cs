@@ -13,7 +13,7 @@ namespace TexasShootEm
         private bool _isCountingDown;
         private bool _hasTimerExpired;
         
-        void Start()
+        void Awake()
         {
             _timerText = GetComponent<TextMeshProUGUI>();
             _hasTimerExpired = false;
@@ -32,7 +32,7 @@ namespace TexasShootEm
             // IF timer reaches 0, invoke GameOver game event.
             if (_timer <= 0)
             {
-                _hasTimerExpired = true;
+                _isCountingDown = false;
                 if (_hasTimerExpired)
                 {
                     onGameOverEvent.Invoke(new Empty());
