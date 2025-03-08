@@ -22,6 +22,8 @@ namespace TexasShootEm
         
         void Update()
         {
+            if (!_isCountingDown) return;
+            
             // Display timer
             _timerText.text = _timer.ToString("00");
             if (_isCountingDown)
@@ -42,37 +44,6 @@ namespace TexasShootEm
             if (_timer > 0)
             {
                 _hasTimerExpired = false;
-            }
-            
-            // TODO: Remove these, they only exist for testing purposes.
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                Debug.Log("Starting Timer");
-                StartTimer();
-            }
-
-            if (Input.GetKeyDown(KeyCode.P))
-            {
-                Debug.Log("Pausing Timer");
-                PauseTimer();
-            }
-
-            if (Input.GetKeyDown(KeyCode.T))
-            {
-                Debug.Log("Increasing Timer by 2s");
-                ModifyTimer(2f);
-            }
-
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                Debug.Log("Decreasing Timer by 2s");
-                ModifyTimer(-2f);
-            }
-
-            if (Input.GetKeyDown(KeyCode.Y))
-            {
-                Debug.Log("Setting timer to 20s");
-                SetTimeLimit(20f);
             }
         }
 
