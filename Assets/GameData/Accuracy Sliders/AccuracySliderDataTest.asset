@@ -12,15 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acd0369e9eca8ac4f8590af12f5f5e7e, type: 3}
   m_Name: AccuracySliderDataTest
   m_EditorClassIdentifier: 
-  Bad:
-    RangeStart: 6
+  sliderData:
+  - RangeStart: 0.2
     TimePenalty: 0
-  Okay:
-    RangeStart: 21
+  - RangeStart: 0.4
     TimePenalty: 0
-  Good:
-    RangeStart: 41
+  - RangeStart: 0.6
     TimePenalty: 0
-  Perfect:
-    RangeStart: 86
+  - RangeStart: 0.85
     TimePenalty: 0
