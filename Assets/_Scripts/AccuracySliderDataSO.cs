@@ -5,12 +5,11 @@ namespace TexasShootEm
     [CreateAssetMenu(menuName = "TexasShootEm/Accuracy Slider Data", fileName = "AccuracySliderData")]
     public class AccuracySliderDataSO : ScriptableObject
     {
+        [Header("0 = Bad, 1 = Okay, 2 = Good, 3 = Perfect")]
         public SliderData[] sliderData = new SliderData[4];
-        
-        // public SliderData Bad;
-        // public SliderData Okay;
-        // public SliderData Good;
-        // public SliderData Perfect;
+
+        [Range(0.25f, 3f)]
+        public float PointerSpeed = 0.25f;
     }
     
     [System.Serializable]
