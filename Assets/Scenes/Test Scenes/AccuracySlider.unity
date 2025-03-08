@@ -534,14 +534,6 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2908017441618678153, guid: 3b3354938b46c2e48a8e6f0ea351c4ff, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2908017441618678153, guid: 3b3354938b46c2e48a8e6f0ea351c4ff, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9216591534600088936, guid: 3b3354938b46c2e48a8e6f0ea351c4ff, type: 3}
       propertyPath: m_Name
       value: Accuracy Slider
