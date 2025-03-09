@@ -9,14 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b4f88c4c70584e40b3a8ae2798f3f42, type: 3}
-  m_Name: Level6
+  m_Script: {fileID: 11500000, guid: e44b0b43739c58647837ca8306f15893, type: 3}
+  m_Name: OnPlaySfx
   m_EditorClassIdentifier: 
-  LevelNumber: 6
-  Difficulty: Beginner
-  Unlocked: 0
-  LevelTime: 25
-  HasAccuracySlider: 0
-  AccuracySliderData: {fileID: 0}
-  HasKeyPresses: 1
-  KeyPresses: 3

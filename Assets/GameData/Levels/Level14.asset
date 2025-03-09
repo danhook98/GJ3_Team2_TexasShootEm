@@ -14,3 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelNumber: 14
   Difficulty: Expert
+  Unlocked: 0
+  LevelTime: 25
+  HasAccuracySlider: 1
+  AccuracySliderData: {fileID: 11400000, guid: bd29f9d4260595a46a3d62fd856a5432, type: 2}
+  HasKeyPresses: 1
+  KeyPresses: 7

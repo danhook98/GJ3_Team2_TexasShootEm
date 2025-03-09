@@ -324,10 +324,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 34388105316538742, guid: 84144fa9b36b01846b9108b63fddb39d, type: 3}
-      propertyPath: numberOfKeysToPress
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 5852193552603438504, guid: 84144fa9b36b01846b9108b63fddb39d, type: 3}
       propertyPath: m_Name
       value: KeyPressQTE
