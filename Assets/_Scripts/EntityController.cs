@@ -27,13 +27,11 @@ namespace TexasShootEm
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-               // StartCoroutine(EvilTubboShoot());
                 StartCoroutine(EntityShoot());
             }
 
             if (Input.GetKeyDown(KeyCode.T))
             {
-                //StartCoroutine(EvilTubboDeath());
                 StartCoroutine(EntityDeath());
             }
 
