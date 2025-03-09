@@ -362,8 +362,9 @@ MonoBehaviour:
   entityShoot: {fileID: 11400000, guid: dbe60c3a80345104e877ad33757abd41, type: 2}
   entityDeath: {fileID: 11400000, guid: 00bcb67c27258ef449d92e5ef51642fe, type: 2}
   entityAim: {fileID: 11400000, guid: 8bd338124b435a847aa1605995e97280, type: 2}
-  entityDeathSFX: {fileID: 11400000, guid: 8e7bcf5498f1fdb4e83e0b827418cb04, type: 2}
-  entityShootSFX: {fileID: 11400000, guid: 9d59716d71c965943bb5347625321701, type: 2}
+  playSfx: {fileID: 11400000, guid: 60f412faab172d24ab24c015a4296c9d, type: 2}
+  entityDeathSfx: {fileID: 11400000, guid: 8e7bcf5498f1fdb4e83e0b827418cb04, type: 2}
+  entityShootSfx: {fileID: 11400000, guid: 9d59716d71c965943bb5347625321701, type: 2}
 --- !u!1001 &1564707195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -500,9 +501,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityShoot: {fileID: 11400000, guid: fae6a77b6b3a9c749ac73283e8008dcb, type: 2}
   entityDeath: {fileID: 11400000, guid: a36452a17bbd01743b68fbc1aa4434d4, type: 2}
-  entityAim: {fileID: 0}
-  entityDeathSFX: {fileID: 11400000, guid: 8e7bcf5498f1fdb4e83e0b827418cb04, type: 2}
-  entityShootSFX: {fileID: 11400000, guid: 9d59716d71c965943bb5347625321701, type: 2}
+  entityAim: {fileID: 11400000, guid: 8bd338124b435a847aa1605995e97280, type: 2}
+  playSfx: {fileID: 11400000, guid: 60f412faab172d24ab24c015a4296c9d, type: 2}
+  entityDeathSfx: {fileID: 11400000, guid: 8e7bcf5498f1fdb4e83e0b827418cb04, type: 2}
+  entityShootSfx: {fileID: 11400000, guid: 9d59716d71c965943bb5347625321701, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
