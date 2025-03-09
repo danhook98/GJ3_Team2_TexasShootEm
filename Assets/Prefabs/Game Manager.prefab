@@ -53,3 +53,5 @@ MonoBehaviour:
   modifyTimerEvent: {fileID: 11400000, guid: fbbe9924665f78c479ce907ba6a880ee, type: 2}
   startTimerEvent: {fileID: 11400000, guid: 99dc763cc5fae964196676e6bf5a4287, type: 2}
   pauseTimerEvent: {fileID: 11400000, guid: 089c1e203daa9c640918e4e321369d4a, type: 2}
+  playSfxEvent: {fileID: 11400000, guid: 60f412faab172d24ab24c015a4296c9d, type: 2}
+  sfxCountdown: {fileID: 11400000, guid: d1b98d2b1e46e614cb17aa79a6fbfad8, type: 2}

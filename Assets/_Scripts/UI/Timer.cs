@@ -47,7 +47,11 @@ namespace TexasShootEm
             }
         }
 
-        public void SetTimeLimit(float time) => _timer = time;
+        public void SetTimeLimit(float time)
+        {
+            _timer = time;
+            _timerText.text = _timer.ToString("00");
+        }
 
         public void StartTimer() => _isCountingDown = true;
 

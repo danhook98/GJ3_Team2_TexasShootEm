@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using TexasShootEm.EventSystem;
 using UnityEngine;
 
@@ -22,6 +23,11 @@ namespace TexasShootEm
         [SerializeField] private VoidEvent startTimerEvent; 
         [SerializeField] private VoidEvent pauseTimerEvent;
 
+        [Header("Audio")] 
+        [SerializeField] private AudioClipSOEvent playSfxEvent;
+        [Space] 
+        [SerializeField] private AudioClipSO sfxCountdown;
+
         private bool _gameCanRun = true; 
 
         private void Awake()
@@ -42,9 +48,16 @@ namespace TexasShootEm
             }
         }
 
-        private void Start()
+        private IEnumerator Start()
         {
+            if (!_gameCanRun) yield return null; 
+            
             LoadLevel();
+            
+            playSfxEvent.Invoke(sfxCountdown);
+            yield return new WaitForSeconds(3f);
+            
+            startTimerEvent.Invoke(new Empty());
         }
 
         private void Update()
@@ -73,7 +86,6 @@ namespace TexasShootEm
             }
             
             setTimerEvent.Invoke(levelToLoad.loadedLevel.LevelTime);
-            startTimerEvent.Invoke(new Empty()); // for testing 
         }
     }
 }
