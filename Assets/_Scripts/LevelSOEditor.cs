@@ -11,7 +11,9 @@ namespace TexasShootEm
         private SerializedProperty _levelUnlocked;
         private SerializedProperty _difficultyProperty;
         private SerializedProperty _levelTimeProperty;
+        private SerializedProperty _hasAccuracySliderProperty;
         private SerializedProperty _accuracySliderData;
+        private SerializedProperty _hasKeyPressesProperty;
         private SerializedProperty _keyPresses;
         
         private string[] difficultyList = { "Beginner", "Intermediate", "Expert" };
@@ -23,7 +25,9 @@ namespace TexasShootEm
             _levelUnlocked = serializedObject.FindProperty("Unlocked");
             _difficultyProperty = serializedObject.FindProperty("Difficulty");
             _levelTimeProperty = serializedObject.FindProperty("LevelTime");
+            _hasAccuracySliderProperty = serializedObject.FindProperty("HasAccuracySlider");
             _accuracySliderData = serializedObject.FindProperty("AccuracySliderData");
+            _hasKeyPressesProperty = serializedObject.FindProperty("HasKeyPresses");
             _keyPresses = serializedObject.FindProperty("KeyPresses");
             
             // Ensure that the index of the dropdown is the same as what's saved in the LevelSO data.
@@ -49,7 +53,11 @@ namespace TexasShootEm
             _difficultyProperty.stringValue = difficultyList[selectedIndex];
 
             EditorGUILayout.PropertyField(_levelTimeProperty);
+            
+            EditorGUILayout.PropertyField(_hasAccuracySliderProperty);
             EditorGUILayout.PropertyField(_accuracySliderData);
+            
+            EditorGUILayout.PropertyField(_hasKeyPressesProperty);
             EditorGUILayout.PropertyField(_keyPresses);
             
             serializedObject.ApplyModifiedProperties();

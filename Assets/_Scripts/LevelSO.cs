@@ -13,8 +13,13 @@ namespace TexasShootEm
         public bool Unlocked = false;
 
         [Space] 
-        public int LevelTime = 30; 
+        public int LevelTime = 30;
+        [Space]
+        
+        public bool HasAccuracySlider;
         public AccuracySliderDataSO AccuracySliderData;
+        [Space]
+        public bool HasKeyPresses;
         public int KeyPresses = 0;
     }
 }
