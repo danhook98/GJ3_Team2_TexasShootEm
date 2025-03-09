@@ -11,6 +11,10 @@ namespace TexasShootEm
         [SerializeField] private VoidEvent entityDeath;
         [SerializeField] private VoidEvent entityAim;
 
+        [Header("Audio Clip SO")]
+        [SerializeField] private AudioClipSO entityDeathSFX;
+        [SerializeField] private AudioClipSO entityShootSFX;
+
         private Animator _entityAnim;
         private bool _isDead = false;
 
