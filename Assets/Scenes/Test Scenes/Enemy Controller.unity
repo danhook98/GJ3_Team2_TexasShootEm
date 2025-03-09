@@ -424,6 +424,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+--- !u!95 &1704299900 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6854051780544692888, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+  m_PrefabInstance: {fileID: 1704299899}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1867497531265451446
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -436,6 +441,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Evil Tubbo
       objectReference: {fileID: 0}
+    - target: {fileID: 4967792600751444349, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
+      propertyPath: evilAnim
+      value: 
+      objectReference: {fileID: 1867497531265451447}
+    - target: {fileID: 4967792600751444349, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
+      propertyPath: sheriffAnim
+      value: 
+      objectReference: {fileID: 1704299900}
     - target: {fileID: 8460632381936193021, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.0519
@@ -481,6 +494,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
+--- !u!95 &1867497531265451447 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8752729887906680067, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
+  m_PrefabInstance: {fileID: 1867497531265451446}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
