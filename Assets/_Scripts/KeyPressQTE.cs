@@ -15,7 +15,7 @@ namespace TexasShootEm
         [SerializeField] private float spaceBetween = 1.5f;
 
         [Header("Key Game Object")] 
-        [SerializeField] private Arrow arrowPrefab;
+        [SerializeField] private Arrow[] arrowPrefabs;
         
         private RandomKeyPressGenerator _keyGenerator;
         private List<Key> _queuedKeys;
@@ -86,10 +86,10 @@ namespace TexasShootEm
             
             for (int i = 0; i < arrowsToSpawn; i++)
             {
-                //Vector3 pos = _startPosition + (Vector2.right * (i * spaceBetween));
                 Vector2 pos = _startPosition + new Vector2(i * spaceBetween, 0);
                 
-                Arrow arrow = Instantiate(arrowPrefab, transform);
+                int arrowIndex = (int)_queuedKeys[i];
+                Arrow arrow = Instantiate(arrowPrefabs[arrowIndex], transform);
                 arrow.SetPosition(pos);
                 arrow.transform.SetParent(_arrowContainer.transform);
                 

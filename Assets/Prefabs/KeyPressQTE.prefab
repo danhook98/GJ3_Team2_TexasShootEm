@@ -47,4 +47,10 @@ MonoBehaviour:
   inputReader: {fileID: 11400000, guid: 1fca4445773370446a46be614455a663, type: 2}
   numberOfKeysToPress: 4
   spawnPosition: {x: 1.25, y: 0.25}
-  arrowPrefab: {fileID: 4690316655991681865, guid: f13e8785fe703b1478678e77407b1392, type: 3}
+  arrowDisplayPosition: {x: 0.5, y: 0.25}
+  spaceBetween: 1.5
+  arrowPrefabs:
+  - {fileID: 1557382349821142633, guid: 9c9d33108ea3c844791905636cce404b, type: 3}
+  - {fileID: 6113024881897496855, guid: 0ff443afe21f3ae4fb7e171ca2ba010a, type: 3}
+  - {fileID: 6023532389075608899, guid: 7f5f4fc97844ab2459347e2a0e06a631, type: 3}
+  - {fileID: 5948561466691369263, guid: 8c6710a4b4da5f1438bbfa38d007231d, type: 3}
