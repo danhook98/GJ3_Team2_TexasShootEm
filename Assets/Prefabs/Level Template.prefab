@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelSO: {fileID: 0}
+  levelLoadSO: {fileID: 11400000, guid: d7d9314381ad8cb4e95903bdfc9c665e, type: 2}
   titleText: {fileID: 4176859651641954163}
   difficultyText: {fileID: 1134050837882536509}
   playButton: {fileID: 8014429458777752102}
@@ -533,7 +534,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7097034380559517352}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3132041751933958851}
+        m_TargetAssemblyTypeName: TexasShootEm.LevelDataLoader, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5999362177869480443
 MonoBehaviour:
   m_ObjectHideFlags: 0
