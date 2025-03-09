@@ -87,5 +87,12 @@ namespace TexasShootEm
             
             setTimerEvent.Invoke(levelToLoad.loadedLevel.LevelTime);
         }
+
+        public void TimeExpired()
+        {
+            Debug.Log("<color=red>Game Manager: </color>Time expired.");
+            // Enemy shoot
+            // Player death
+        }
     }
 }

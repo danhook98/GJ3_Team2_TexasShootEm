@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7465544803885367409}
   - component: {fileID: 6854051780544692888}
   - component: {fileID: 5513669554627588752}
+  - component: {fileID: 8738951299522332066}
   m_Layer: 0
   m_Name: Sheriff Tubbo
   m_TagString: Untagged
@@ -125,3 +126,31 @@ MonoBehaviour:
   playSfx: {fileID: 11400000, guid: 60f412faab172d24ab24c015a4296c9d, type: 2}
   entityDeathSfx: {fileID: 11400000, guid: 8e7bcf5498f1fdb4e83e0b827418cb04, type: 2}
   entityShootSfx: {fileID: 11400000, guid: 9d59716d71c965943bb5347625321701, type: 2}
+--- !u!114 &8738951299522332066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5048054565758722832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 846db8c63b964fa98a32f2478749d3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToListen: {fileID: 11400000, guid: fae6a77b6b3a9c749ac73283e8008dcb, type: 2}
+  onEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5513669554627588752}
+        m_TargetAssemblyTypeName: TexasShootEm.EntityController, Assembly-CSharp
+        m_MethodName: Death
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

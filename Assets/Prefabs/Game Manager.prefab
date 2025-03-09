@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4503786417044690033}
   - component: {fileID: 5898756976303363941}
+  - component: {fileID: 1571820183641981543}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -55,3 +56,31 @@ MonoBehaviour:
   pauseTimerEvent: {fileID: 11400000, guid: 089c1e203daa9c640918e4e321369d4a, type: 2}
   playSfxEvent: {fileID: 11400000, guid: 60f412faab172d24ab24c015a4296c9d, type: 2}
   sfxCountdown: {fileID: 11400000, guid: d1b98d2b1e46e614cb17aa79a6fbfad8, type: 2}
+--- !u!114 &1571820183641981543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2604553072769244998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 846db8c63b964fa98a32f2478749d3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToListen: {fileID: 11400000, guid: c47e0a36040aa4d4b87e243a493f9136, type: 2}
+  onEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5898756976303363941}
+        m_TargetAssemblyTypeName: TexasShootEm.GameManager, Assembly-CSharp
+        m_MethodName: TimeExpired
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
