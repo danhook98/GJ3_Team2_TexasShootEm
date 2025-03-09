@@ -18,7 +18,7 @@ namespace TexasShootEm
         private Animator _entityAnim;
         private bool _isDead = false;
 
-        private void Start()
+        private void Awake()
         {
             _entityAnim = GetComponent<Animator>();
         }
