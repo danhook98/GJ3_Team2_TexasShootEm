@@ -15,3 +15,8 @@ MonoBehaviour:
   LevelNumber: 1
   Difficulty: Beginner
   Unlocked: 1
+  LevelTime: 30
+  HasAccuracySlider: 1
+  AccuracySliderData: {fileID: 11400000, guid: 84f070756854a204e91bfe0c34409f95, type: 2}
+  HasKeyPresses: 0
+  KeyPresses: 0
