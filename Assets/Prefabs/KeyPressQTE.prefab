@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6466620382445914823}
   - component: {fileID: 34388105316538742}
+  - component: {fileID: 4643397403553463735}
   m_Layer: 0
   m_Name: KeyPressQTE
   m_TagString: Untagged
@@ -54,3 +55,31 @@ MonoBehaviour:
   - {fileID: 6113024881897496855, guid: 0ff443afe21f3ae4fb7e171ca2ba010a, type: 3}
   - {fileID: 6023532389075608899, guid: 7f5f4fc97844ab2459347e2a0e06a631, type: 3}
   - {fileID: 5948561466691369263, guid: 8c6710a4b4da5f1438bbfa38d007231d, type: 3}
+--- !u!114 &4643397403553463735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5852193552603438504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a02c052668411899aba70838419ec4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToListen: {fileID: 11400000, guid: 9dc100497d42f6048a09773a1edaf70f, type: 2}
+  onEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 34388105316538742}
+        m_TargetAssemblyTypeName: TexasShootEm.KeyPressQTE, Assembly-CSharp
+        m_MethodName: LoadData
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
