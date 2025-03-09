@@ -1,4 +1,5 @@
 using System;
+using TexasShootEm.EventSystem;
 using UnityEngine;
 
 namespace TexasShootEm
@@ -6,6 +7,9 @@ namespace TexasShootEm
     public class GameManager : MonoBehaviour
     {
         [SerializeField] private LevelLoadSO levelToLoad;
+
+        [Header("Accuracy Slider Events")] 
+        [SerializeField] private AccuracySliderDataSOEvent sendSliderData;
 
         private bool _gameCanRun = true; 
 
@@ -31,7 +35,7 @@ namespace TexasShootEm
         {
             if (levelToLoad.loadedLevel.HasAccuracySlider)
             {
-                
+                sendSliderData.Invoke(levelToLoad.loadedLevel.AccuracySliderData);
             }
 
             if (levelToLoad.loadedLevel.HasKeyPresses)
