@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelSO: {fileID: 0}
+  levelLoadSO: {fileID: 11400000, guid: d7d9314381ad8cb4e95903bdfc9c665e, type: 2}
   titleText: {fileID: 4176859651641954163}
   difficultyText: {fileID: 1134050837882536509}
   playButton: {fileID: 8014429458777752102}
@@ -423,8 +424,9 @@ GameObject:
   - component: {fileID: 5481236954103613645}
   - component: {fileID: 6726764770059595952}
   - component: {fileID: 7097034380559517352}
-  - component: {fileID: 8014429458777752102}
   - component: {fileID: 5999362177869480443}
+  - component: {fileID: 8014429458777752102}
+  - component: {fileID: 157134811393903495}
   m_Layer: 5
   m_Name: Play Button
   m_TagString: Untagged
@@ -490,6 +492,26 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5999362177869480443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6459998166557848845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: 100
+  m_PreferredHeight: -1
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!114 &8014429458777752102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -533,8 +555,33 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7097034380559517352}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
---- !u!114 &5999362177869480443
+      m_Calls:
+      - m_Target: {fileID: 3132041751933958851}
+        m_TargetAssemblyTypeName: TexasShootEm.LevelDataLoader, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 157134811393903495}
+        m_TargetAssemblyTypeName: TexasShootEm.EventSystem.AudioClipSOEventTrigger,
+          Assembly-CSharp
+        m_MethodName: Trigger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &157134811393903495
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -543,17 +590,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6459998166557848845}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d0d472dd07e6b048952b3aae84d7068, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreLayout: 0
-  m_MinWidth: -1
-  m_MinHeight: -1
-  m_PreferredWidth: 100
-  m_PreferredHeight: -1
-  m_FlexibleWidth: -1
-  m_FlexibleHeight: -1
-  m_LayoutPriority: 1
+  eventToTrigger: {fileID: 11400000, guid: 60f412faab172d24ab24c015a4296c9d, type: 2}
+  audioClip: {fileID: 11400000, guid: 9d59716d71c965943bb5347625321701, type: 2}
 --- !u!1 &8159546643298400995
 GameObject:
   m_ObjectHideFlags: 0

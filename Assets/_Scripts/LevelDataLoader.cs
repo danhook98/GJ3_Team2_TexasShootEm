@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace TexasShootEm
@@ -10,6 +11,8 @@ namespace TexasShootEm
     public class LevelDataLoader : MonoBehaviour
     {
         [SerializeField] private LevelSO levelSO;
+        [SerializeField] private LevelLoadSO levelLoadSO;
+        
         [SerializeField] private TextMeshProUGUI titleText;
         [SerializeField] private TextMeshProUGUI difficultyText;
         [SerializeField] private Button playButton;
@@ -27,6 +30,13 @@ namespace TexasShootEm
         {
             playButton.interactable = levelSO.Unlocked;
             buttonText.text = levelSO.Unlocked ? "Play" : "Locked";
+        }
+
+        public void Play()
+        {
+            levelLoadSO.loadedLevel = levelSO;
+            Debug.Log($"Loading level {levelSO.LevelNumber}");
+            SceneManager.LoadScene("MainGame");
         }
     }
 }
