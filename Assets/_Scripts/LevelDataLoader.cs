@@ -12,8 +12,6 @@ namespace TexasShootEm
     {
         [SerializeField] private LevelSO levelSO;
         [SerializeField] private LevelLoadSO levelLoadSO;
-        [Space] 
-        [SerializeField] private AudioClipSO clickSound;
         
         [SerializeField] private TextMeshProUGUI titleText;
         [SerializeField] private TextMeshProUGUI difficultyText;
