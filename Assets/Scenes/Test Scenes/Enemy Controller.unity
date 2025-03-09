@@ -403,6 +403,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheriff Tubbo
       objectReference: {fileID: 0}
+    - target: {fileID: 6854051780544692888, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b3649c3e52841cd418bf25e6ebdf79da, type: 2}
     - target: {fileID: 7465544803885367409, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
       propertyPath: m_Size.x
       value: 0.54
@@ -446,9 +450,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1867497531265451447}
     - target: {fileID: 4967792600751444349, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
+      propertyPath: evilDeath
+      value: 
+      objectReference: {fileID: 11400000, guid: a36452a17bbd01743b68fbc1aa4434d4, type: 2}
+    - target: {fileID: 4967792600751444349, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
+      propertyPath: evilShoot
+      value: 
+      objectReference: {fileID: 11400000, guid: fae6a77b6b3a9c749ac73283e8008dcb, type: 2}
+    - target: {fileID: 4967792600751444349, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
+      propertyPath: sheriffAim
+      value: 
+      objectReference: {fileID: 11400000, guid: 8bd338124b435a847aa1605995e97280, type: 2}
+    - target: {fileID: 4967792600751444349, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
       propertyPath: sheriffAnim
       value: 
       objectReference: {fileID: 1704299900}
+    - target: {fileID: 4967792600751444349, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
+      propertyPath: sheriffDeath
+      value: 
+      objectReference: {fileID: 11400000, guid: 00bcb67c27258ef449d92e5ef51642fe, type: 2}
+    - target: {fileID: 4967792600751444349, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
+      propertyPath: sheriffShoot
+      value: 
+      objectReference: {fileID: 11400000, guid: dbe60c3a80345104e877ad33757abd41, type: 2}
     - target: {fileID: 8460632381936193021, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.0519
