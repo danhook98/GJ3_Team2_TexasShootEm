@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using TexasShootEm.EventSystem;
-using UnityEngine.Serialization;
 
 namespace TexasShootEm
 {
@@ -24,13 +23,13 @@ namespace TexasShootEm
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                StartCoroutine(EvilTubboShoot());
+               // StartCoroutine(EvilTubboShoot());
                 StartCoroutine(SheriffShoot());
             }
 
             if (Input.GetKeyDown(KeyCode.T))
             {
-                StartCoroutine(EvilTubboDeath());
+                //StartCoroutine(EvilTubboDeath());
                 StartCoroutine(SheriffDeath());
             }
 
@@ -42,13 +41,14 @@ namespace TexasShootEm
 
         public IEnumerator EvilTubboShoot()
         {
-            if (_isDead) yield return null;
-            
-            Debug.Log("Starting enemy shoot coroutine");
-            evilAnim.SetTrigger("Shoot");
-            yield return new WaitForSeconds(0.5f);
-            evilShoot.Invoke(new Empty());
-            yield return new WaitForSeconds(0.5f);
+            if (!_isDead)
+            {
+                Debug.Log("Starting enemy shoot coroutine");
+                evilAnim.SetTrigger("Shoot");
+                yield return new WaitForSeconds(0.5f);
+                evilShoot.Invoke(new Empty());
+                yield return new WaitForSeconds(0.5f);
+            }
         }
 
         public IEnumerator EvilTubboDeath()
@@ -63,14 +63,16 @@ namespace TexasShootEm
 
         public IEnumerator SheriffShoot()
         {
-            if (_isDead) yield return null;
-            
-            Debug.Log("Starting player shoot coroutine");
-            sheriffAnim.SetTrigger("Shoot");
-            yield return new WaitForSeconds(0.5f);
-            sheriffShoot.Invoke(new Empty());
-            yield return new WaitForSeconds(0.5f);
+            if (!_isDead) // Condition needed to avoid playing gunshot SFX when dead.
+            {
+                Debug.Log("Starting player shoot coroutine");
+                sheriffAnim.SetTrigger("Shoot");
+                yield return new WaitForSeconds(0.2f);
+                sheriffShoot.Invoke(new Empty());
+                yield return new WaitForSeconds(0.5f);
+            }
         }
+            
         
         public IEnumerator SheriffDeath()
         {
@@ -78,7 +80,7 @@ namespace TexasShootEm
             Debug.Log("Starting player death coroutine");
             sheriffAnim.SetTrigger("Death");
             sheriffDeath.Invoke(new Empty());
-            yield return new WaitForSeconds(0.7f);
+            yield return new WaitForSeconds(0.9f);
             sheriffAnim.SetTrigger("StayDead");
         }
 
@@ -94,5 +96,3 @@ namespace TexasShootEm
         }
     }
 }
-
-// Trigger names for Sheriff Tubbo: Aim, Shoot, Death, StayDead, StayAiming
