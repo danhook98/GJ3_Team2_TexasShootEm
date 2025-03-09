@@ -47,24 +47,12 @@ namespace TexasShootEm
             }
         }
 
-        public void SetTimeLimit(float time)
-        {
-            _timer = time;
-        }
+        public void SetTimeLimit(float time) => _timer = time;
 
-        public void StartTimer()
-        {
-            _isCountingDown = true;
-        }
+        public void StartTimer() => _isCountingDown = true;
 
-        public void PauseTimer()
-        {
-            _isCountingDown = false;
-        }
+        public void PauseTimer() => _isCountingDown = false;
 
-        public void ModifyTimer(float time)
-        {
-            _timer += time;
-        }
+        public void ModifyTimer(float time) => _timer += time;
     }
 }

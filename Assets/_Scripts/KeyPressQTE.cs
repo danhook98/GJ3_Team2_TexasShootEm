@@ -107,5 +107,7 @@ namespace TexasShootEm
             _arrowContainer.transform.SetParent(transform);
             _arrowContainer.name = "ArrowContainer";
         }
+        
+        public void LoadData(int value) => numberOfKeysToPress = value;
     }
 }
