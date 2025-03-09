@@ -38,12 +38,17 @@ namespace TexasShootEm
                 _gameCanRun = false;
                 return; 
             }
-            
+        }
+
+        private void Start()
+        {
             LoadLevel();
         }
 
         private void LoadLevel()
         {
+            Debug.Log("<color=red>Game Manager: </color>Loading level...");
+            
             if (levelToLoad.loadedLevel.HasAccuracySlider)
             {
                 Debug.Log("Sending slider data");
