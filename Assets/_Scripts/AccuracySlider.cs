@@ -10,6 +10,10 @@ namespace TexasShootEm
         [SerializeField] private InputReader inputReader; 
         [SerializeField] private Slider accuracySlider;
         [SerializeField] private AnimationCurve lerpCurve;
+        
+        [Header("Slider Zones")]
+        [SerializeField] private RectTransform[] sliderZones;
+        [SerializeField] private AccuracySliderDataSO defaultAccuracySliderData;
     
         [SerializeField] private float difficultyMultiplier = 0.25f;
     
@@ -29,6 +33,8 @@ namespace TexasShootEm
             scoreResults = new Dictionary<string, float>();
             _isSliderPaused = false;
             AddNewScoreResults();
+            
+            SetSliderZones();
         }
 
         private void OnEnable() => inputReader.OnAimEvent += GetSliderValue;
@@ -73,6 +79,15 @@ namespace TexasShootEm
             scoreResults.Add("Okay!", _okayScoreRange);
             scoreResults.Add("Bad!", _badScoreRange);
             scoreResults.Add("Miss!", _missScoreRange);
+        }
+
+        private void SetSliderZones()
+        {
+            for (int i = 0; i < sliderZones.Length; i++)
+            {
+                float xScale = 1 - defaultAccuracySliderData.sliderData[i].RangeStart;
+                sliderZones[i].localScale = new Vector3(xScale, 1f, 1f);
+            }
         }
         
         public void SetDifficulty(float newMultiplier) => difficultyMultiplier = newMultiplier;
