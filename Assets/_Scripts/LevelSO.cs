@@ -11,11 +11,10 @@ namespace TexasShootEm
         public string Difficulty;
         
         public bool Unlocked = false;
-        
-        [Space]
-        
+
+        [Space] 
+        public int LevelTime = 30; 
         public AccuracySliderDataSO AccuracySliderData;
         public int KeyPresses = 0;
-        
     }
 }

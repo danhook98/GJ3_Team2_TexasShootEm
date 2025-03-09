@@ -10,6 +10,7 @@ namespace TexasShootEm
         private SerializedProperty _levelNumber;
         private SerializedProperty _levelUnlocked;
         private SerializedProperty _difficultyProperty;
+        private SerializedProperty _levelTimeProperty;
         private SerializedProperty _accuracySliderData;
         private SerializedProperty _keyPresses;
         
@@ -21,6 +22,7 @@ namespace TexasShootEm
             _levelNumber = serializedObject.FindProperty("LevelNumber");
             _levelUnlocked = serializedObject.FindProperty("Unlocked");
             _difficultyProperty = serializedObject.FindProperty("Difficulty");
+            _levelTimeProperty = serializedObject.FindProperty("LevelTime");
             _accuracySliderData = serializedObject.FindProperty("AccuracySliderData");
             _keyPresses = serializedObject.FindProperty("KeyPresses");
             
@@ -46,6 +48,7 @@ namespace TexasShootEm
             // Update the difficulty property string text with what was selected.
             _difficultyProperty.stringValue = difficultyList[selectedIndex];
 
+            EditorGUILayout.PropertyField(_levelTimeProperty);
             EditorGUILayout.PropertyField(_accuracySliderData);
             EditorGUILayout.PropertyField(_keyPresses);
             
