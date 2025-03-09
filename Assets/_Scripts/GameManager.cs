@@ -10,6 +10,7 @@ namespace TexasShootEm
 
         [Header("Accuracy Slider Events")] 
         [SerializeField] private AccuracySliderDataSOEvent sendSliderData;
+        [SerializeField] private BoolEvent showAccuracySliderEvent;
 
         [Header("Key Press QTE Events")] 
         [SerializeField] private IntEvent sendKeyPressesEvent;
@@ -44,6 +45,14 @@ namespace TexasShootEm
         {
             LoadLevel();
         }
+
+        // private void Update()
+        // {
+        //     if (Input.GetKeyDown(KeyCode.Space))
+        //     {
+        //         showAccuracySliderEvent.Invoke(true);
+        //     }
+        // }
 
         private void LoadLevel()
         {
