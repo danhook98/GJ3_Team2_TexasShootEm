@@ -17,6 +17,8 @@ namespace TexasShootEm
         [Header("Key Game Object")] 
         [SerializeField] private Arrow[] arrowPrefabs;
         
+        private bool _keyPressQteActive = false;
+        
         private RandomKeyPressGenerator _keyGenerator;
         private List<Key> _queuedKeys;
         private List<Arrow> _arrowObjects;
@@ -42,22 +44,16 @@ namespace TexasShootEm
 
         private void OnEnable() => inputReader.OnDirectionalEvent += KeyPress;
         private void OnDisable() => inputReader.OnDirectionalEvent -= KeyPress;
-
-        private void Update()
-        {
-            // FOR TESTING ONLY.
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                GenerateKeys(numberOfKeysToPress);
-            }
-        }
         
         private void KeyPress(Vector2 input)
         {
+            if (!_keyPressQteActive) return; 
+            
             if (_queuedKeys.Count == 0) return; 
             
-            var key = _keyGenerator.GetKeyFromDirection(input);
+            Key key = _keyGenerator.GetKeyFromDirection(input);
 
+            // TODO: if the key isn't the right one, remove it anyway and don't contribute towards the score.
             if (key == _queuedKeys[0])
             {
                 Debug.Log("Valid key pressed in sequence!");
@@ -72,11 +68,6 @@ namespace TexasShootEm
             RandomKeyPressGenerator.GenerateKeys(ref _queuedKeys, numberOfKeys);
             
             SpawnArrows(numberOfKeys);
-                
-            foreach (Key key in _queuedKeys)
-            {
-                Debug.Log(key);
-            }
         }
 
         private void SpawnArrows(int arrowsToSpawn)
@@ -106,6 +97,12 @@ namespace TexasShootEm
             _arrowContainer = new GameObject();
             _arrowContainer.transform.SetParent(transform);
             _arrowContainer.name = "ArrowContainer";
+        }
+
+        public void ActivateKeyPressQTE()
+        {
+            _keyPressQteActive = true;
+            GenerateKeys(numberOfKeysToPress);
         }
         
         public void LoadData(int value) => numberOfKeysToPress = value;

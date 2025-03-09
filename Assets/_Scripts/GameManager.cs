@@ -14,6 +14,7 @@ namespace TexasShootEm
 
         [Header("Key Press QTE Events")] 
         [SerializeField] private IntEvent sendKeyPressesEvent;
+        [SerializeField] private VoidEvent showKeyPressEvent;
 
         [Header("Timer Events")] 
         [SerializeField] private FloatEvent setTimerEvent;
@@ -46,13 +47,14 @@ namespace TexasShootEm
             LoadLevel();
         }
 
-        // private void Update()
-        // {
-        //     if (Input.GetKeyDown(KeyCode.Space))
-        //     {
-        //         showAccuracySliderEvent.Invoke(true);
-        //     }
-        // }
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                showAccuracySliderEvent.Invoke(true);
+                showKeyPressEvent.Invoke(new Empty());
+            }
+        }
 
         private void LoadLevel()
         {
