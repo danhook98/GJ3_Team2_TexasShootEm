@@ -4,7 +4,7 @@ using TexasShootEm.EventSystem;
 
 namespace TexasShootEm
 {
-    public class EnemyController : MonoBehaviour
+    public class EntityController : MonoBehaviour
     {
         [Header("Events")] 
         [SerializeField] private VoidEvent evilShoot;
