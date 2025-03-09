@@ -14,6 +14,12 @@ namespace TexasShootEm
         [Header("Key Press QTE Events")] 
         [SerializeField] private IntEvent sendKeyPressesEvent;
 
+        [Header("Timer Events")] 
+        [SerializeField] private IntEvent setTimerEvent;
+        [SerializeField] private IntEvent modifyTimerEvent;
+        [SerializeField] private VoidEvent startTimerEvent; 
+        [SerializeField] private VoidEvent pauseTimerEvent;
+
         private bool _gameCanRun = true; 
 
         private void Awake()
