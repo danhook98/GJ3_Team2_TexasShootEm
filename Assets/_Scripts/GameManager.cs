@@ -29,12 +29,15 @@ namespace TexasShootEm
                 _gameCanRun = false;
                 return; 
             }
+            
+            LoadLevel();
         }
 
         private void LoadLevel()
         {
             if (levelToLoad.loadedLevel.HasAccuracySlider)
             {
+                Debug.Log("Sending slider data");
                 sendSliderData.Invoke(levelToLoad.loadedLevel.AccuracySliderData);
             }
 

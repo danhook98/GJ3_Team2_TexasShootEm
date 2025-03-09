@@ -653,6 +653,7 @@ GameObject:
   - component: {fileID: 1962186476220699932}
   - component: {fileID: 8816866920535007566}
   - component: {fileID: 7868031152362646428}
+  - component: {fileID: 3971946875277390893}
   m_Layer: 5
   m_Name: Accuracy Slider
   m_TagString: Untagged
@@ -775,5 +776,33 @@ MonoBehaviour:
   - {fileID: 8976664712612820983}
   - {fileID: 6326889559438776375}
   - {fileID: 7790999806497102918}
-  defaultAccuracySliderData: {fileID: 11400000, guid: 4776ec51bc258be43815fc64ca4674da, type: 2}
+  accuracySliderData: {fileID: 0}
   difficultyMultiplier: 0.25
+--- !u!114 &3971946875277390893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9216591534600088936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2696290a9276534dba071ca4a27d4b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToListen: {fileID: 11400000, guid: 2274ae9613cae3b44957f978554ac2e2, type: 2}
+  onEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7868031152362646428}
+        m_TargetAssemblyTypeName: TexasShootEm.AccuracySlider, Assembly-CSharp
+        m_MethodName: LoadData
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

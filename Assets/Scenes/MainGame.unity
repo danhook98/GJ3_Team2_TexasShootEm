@@ -409,6 +409,11 @@ Transform:
   - {fileID: 1234430034}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &967823768 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9216591534600088936, guid: 3b3354938b46c2e48a8e6f0ea351c4ff, type: 3}
+  m_PrefabInstance: {fileID: 1412204984}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1091342733
 GameObject:
   m_ObjectHideFlags: 0
@@ -820,6 +825,30 @@ PrefabInstance:
     - target: {fileID: 2604184262709610390, guid: 3b3354938b46c2e48a8e6f0ea351c4ff, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3971946875277390893, guid: 3b3354938b46c2e48a8e6f0ea351c4ff, type: 3}
+      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3971946875277390893, guid: 3b3354938b46c2e48a8e6f0ea351c4ff, type: 3}
+      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 967823768}
+    - target: {fileID: 3971946875277390893, guid: 3b3354938b46c2e48a8e6f0ea351c4ff, type: 3}
+      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3971946875277390893, guid: 3b3354938b46c2e48a8e6f0ea351c4ff, type: 3}
+      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 3971946875277390893, guid: 3b3354938b46c2e48a8e6f0ea351c4ff, type: 3}
+      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3971946875277390893, guid: 3b3354938b46c2e48a8e6f0ea351c4ff, type: 3}
+      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 9216591534600088936, guid: 3b3354938b46c2e48a8e6f0ea351c4ff, type: 3}
       propertyPath: m_Name
