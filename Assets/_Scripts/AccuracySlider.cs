@@ -18,10 +18,13 @@ namespace TexasShootEm
     
         [SerializeField] private float difficultyMultiplier = 0.25f;
     
+        private bool _sliderActive = false;
+        
         private float _accuracyScore;
         private float _valueChange; 
         private bool _isSliderPaused;
     
+        // These score ranges need to be overwritten in the LoadData method down below.
         private Dictionary<string, float> scoreResults;
         private float _perfectScoreRange = 0.9f;
         private float _goodScoreRange = 0.6f;
@@ -41,20 +44,16 @@ namespace TexasShootEm
 
         private void Update()
         {
-            if (!_isSliderPaused)
-            {
-                CalculateValueChange();
-            }
-
-            // For Testing
-            if (Input.GetKeyDown(KeyCode.T))
-            {
-                ResetAccuracySlider();
-            }
+            if (_isSliderPaused || !_sliderActive) return;
+            
+            CalculateValueChange();
         }
 
         private void GetSliderValue()
         {
+            // Prevent user input from doing anything if the slider isn't active. 
+            if (!_sliderActive) return; 
+            
             // For scoring, score ranges from 0 to 1, closer to the middle of the bar closer to a value of 1.
             _isSliderPaused = true;
             
@@ -96,7 +95,8 @@ namespace TexasShootEm
             SetSliderZones();
         }
         
-        public void SetDifficulty(float newMultiplier) => difficultyMultiplier = newMultiplier;
-        public void ResetAccuracySlider() => _isSliderPaused = false;
+        // Redundant for now, let's wait and see...
+        // public void SetDifficulty(float newMultiplier) => difficultyMultiplier = newMultiplier;
+        // public void ResetAccuracySlider() => _isSliderPaused = false;
     }
 }
