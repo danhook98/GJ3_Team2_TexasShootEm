@@ -14,9 +14,10 @@ namespace TexasShootEm
         
         [Header("Slider Zones")]
         [SerializeField] private RectTransform[] sliderZones;
-        [SerializeField] private AccuracySliderDataSO accuracySliderData;
     
         [SerializeField] private float difficultyMultiplier = 0.25f;
+        
+        private AccuracySliderDataSO _accuracySliderData;
     
         private bool _sliderActive = false;
         
@@ -83,14 +84,14 @@ namespace TexasShootEm
         {
             for (int i = 0; i < sliderZones.Length; i++)
             {
-                float xScale = 1 - accuracySliderData.sliderData[i].RangeStart;
+                float xScale = 1 - _accuracySliderData.sliderData[i].RangeStart;
                 sliderZones[i].localScale = new Vector3(xScale, 1f, 1f);
             }
         }
 
         public void LoadData(AccuracySliderDataSO sliderData)
         {
-            accuracySliderData = sliderData;
+            _accuracySliderData = sliderData;
             Debug.Log("Loading slider data");
             SetSliderZones();
         }
