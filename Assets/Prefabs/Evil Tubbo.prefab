@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8460632381936193021}
   - component: {fileID: 4881934611465866793}
   - component: {fileID: 8752729887906680067}
-  - component: {fileID: 4967792600751444349}
   m_Layer: 0
   m_Name: Evil Tubbo
   m_TagString: Enemy
@@ -107,17 +106,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4967792600751444349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1426656208180538918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f19cd312b58f0a04ca08fe5fd3332561, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shoot: {fileID: 11400000, guid: fae6a77b6b3a9c749ac73283e8008dcb, type: 2}
-  death: {fileID: 11400000, guid: a36452a17bbd01743b68fbc1aa4434d4, type: 2}
