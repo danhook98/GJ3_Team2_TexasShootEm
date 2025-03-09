@@ -247,7 +247,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7112739961592985066}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -478,6 +478,7 @@ GameObject:
   - component: {fileID: 3840586934610315660}
   - component: {fileID: 767032411747312027}
   - component: {fileID: 4757130025426083634}
+  - component: {fileID: 7637736904894564772}
   m_Layer: 5
   m_Name: Back Button
   m_TagString: Untagged
@@ -598,6 +599,30 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 3793727905668473589}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7637736904894564772}
+        m_TargetAssemblyTypeName: TexasShootEm.EventSystem.VoidEventTrigger, Assembly-CSharp
+        m_MethodName: Trigger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &4757130025426083634
@@ -613,6 +638,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventToTrigger: {fileID: 11400000, guid: cfbc4c5fd4cc1c841b56329189a26839, type: 2}
+--- !u!114 &7637736904894564772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8689640237852372602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36c627e0e8f149c6b5822d32acda4f5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToTrigger: {fileID: 11400000, guid: 2f29abf1cb4005049a74bd3f32608ea6, type: 2}
 --- !u!1 &9186396164902942014
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,6 +846,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3207034957039139066, guid: 250c7f0faf2efcb4c9a42aca34fa0844, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4210522735380597720, guid: 250c7f0faf2efcb4c9a42aca34fa0844, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -827,6 +869,10 @@ PrefabInstance:
     - target: {fileID: 7952964489502188589, guid: 250c7f0faf2efcb4c9a42aca34fa0844, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002538376128171613, guid: 250c7f0faf2efcb4c9a42aca34fa0844, type: 3}
+      propertyPath: m_Value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8760514072532221314, guid: 250c7f0faf2efcb4c9a42aca34fa0844, type: 3}
       propertyPath: m_Name
