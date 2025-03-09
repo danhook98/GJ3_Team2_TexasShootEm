@@ -24,7 +24,7 @@ namespace TexasShootEm
         
         private void Update()
         {
-            _rigidbody.velocity = new Vector2(_direction * moveSpeed, _rigidbody.velocity.y);
+            _rigidbody.velocity = new Vector2(_direction * moveSpeed, _rigidbody.velocity.y) * Time.deltaTime;
 
             // TODO: Testing purposes only, remove after testing.
             if (Input.GetKeyDown(KeyCode.Space))
