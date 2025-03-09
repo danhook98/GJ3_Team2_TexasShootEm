@@ -15,8 +15,8 @@ namespace TexasShootEm
         [SerializeField] private IntEvent sendKeyPressesEvent;
 
         [Header("Timer Events")] 
-        [SerializeField] private IntEvent setTimerEvent;
-        [SerializeField] private IntEvent modifyTimerEvent;
+        [SerializeField] private FloatEvent setTimerEvent;
+        [SerializeField] private FloatEvent modifyTimerEvent;
         [SerializeField] private VoidEvent startTimerEvent; 
         [SerializeField] private VoidEvent pauseTimerEvent;
 
@@ -55,6 +55,9 @@ namespace TexasShootEm
                 Debug.Log("Sending key press QTE data");
                 sendKeyPressesEvent.Invoke(levelToLoad.loadedLevel.KeyPresses); 
             }
+            
+            setTimerEvent.Invoke(levelToLoad.loadedLevel.LevelTime);
+            startTimerEvent.Invoke(new Empty()); // for testing 
         }
     }
 }
