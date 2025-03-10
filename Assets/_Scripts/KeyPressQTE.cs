@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TexasShootEm.EventSystem;
 using UnityEngine;
 
 namespace TexasShootEm
@@ -7,6 +8,9 @@ namespace TexasShootEm
     public class KeyPressQTE : MonoBehaviour
     {
         [SerializeField] private InputReader inputReader;
+        
+        [Header("Events")]
+        [SerializeField] private FloatEvent sendScoreEvent;
         
         [Header("Key Press Variables")]
         [SerializeField] private int numberOfKeysToPress = 2;
@@ -60,6 +64,14 @@ namespace TexasShootEm
                 _queuedKeys.RemoveAt(0);
                 Destroy(_arrowObjects[0].gameObject);
                 _arrowObjects.RemoveAt(0);
+            }
+            
+            // This was the last key.
+            if (_queuedKeys.Count == 0)
+            {
+                // TODO: calculate score percentage to send
+                sendScoreEvent.Invoke(0f);
+                _keyPressQteActive = false;
             }
         }
 

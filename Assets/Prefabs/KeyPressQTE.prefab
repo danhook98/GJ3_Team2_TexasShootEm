@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputReader: {fileID: 11400000, guid: 1fca4445773370446a46be614455a663, type: 2}
+  sendScoreEvent: {fileID: 11400000, guid: 9a19769badcd490419f1e09dbdb052c1, type: 2}
   numberOfKeysToPress: 4
   spawnPosition: {x: 1.25, y: 0.25}
   arrowDisplayPosition: {x: 0.5, y: 0.25}

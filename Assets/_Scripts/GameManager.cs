@@ -8,6 +8,9 @@ namespace TexasShootEm
     public class GameManager : MonoBehaviour
     {
         [SerializeField] private LevelLoadSO levelToLoad;
+        
+        [Header("Core Events")]
+        [SerializeField] private VoidEvent gameWonEvent;
 
         [Header("Accuracy Slider Events")] 
         [SerializeField] private AccuracySliderDataSOEvent sendSliderData;
@@ -96,6 +99,15 @@ namespace TexasShootEm
             }
         }
 
+        private void PlayerWon()
+        {
+            // Stop the timer.
+            pauseTimerEvent.Invoke(new Empty());
+            
+            // Broadcast the game won event. 
+            gameWonEvent.Invoke(new Empty());
+        }
+
         private void DisplaySlider()
         {
             showAccuracySliderEvent.Invoke(true);
@@ -117,6 +129,12 @@ namespace TexasShootEm
             {
                 DisplayQTE();
             }
+        }
+
+        public void PassKeyPressScore(float score)
+        {
+            // do whatever with the score.
+            PlayerWon();
         }
 
         public void TimeExpired()

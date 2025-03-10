@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5898756976303363941}
   - component: {fileID: 1571820183641981543}
   - component: {fileID: 6056855227178211009}
+  - component: {fileID: 2610043354473479408}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -47,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelToLoad: {fileID: 11400000, guid: d7d9314381ad8cb4e95903bdfc9c665e, type: 2}
+  gameWonEvent: {fileID: 11400000, guid: 73829eba445cb804bbf063e72efbcd23, type: 2}
   sendSliderData: {fileID: 11400000, guid: 2274ae9613cae3b44957f978554ac2e2, type: 2}
   showAccuracySliderEvent: {fileID: 11400000, guid: 08569719e33ecda44965f5d96261fcf1, type: 2}
   sendKeyPressesEvent: {fileID: 11400000, guid: 9dc100497d42f6048a09773a1edaf70f, type: 2}
@@ -104,6 +106,34 @@ MonoBehaviour:
       - m_Target: {fileID: 5898756976303363941}
         m_TargetAssemblyTypeName: TexasShootEm.GameManager, Assembly-CSharp
         m_MethodName: PassSliderScore
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2610043354473479408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2604553072769244998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5ce7556aa404addb76cf4413fd7d964, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToListen: {fileID: 11400000, guid: 9a19769badcd490419f1e09dbdb052c1, type: 2}
+  onEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5898756976303363941}
+        m_TargetAssemblyTypeName: TexasShootEm.GameManager, Assembly-CSharp
+        m_MethodName: PassKeyPressScore
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

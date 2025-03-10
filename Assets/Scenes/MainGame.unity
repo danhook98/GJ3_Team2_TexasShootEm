@@ -338,7 +338,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5048054565758722832, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1881484558}
   m_SourcePrefab: {fileID: 100100000, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
 --- !u!4 &401793440 stripped
 Transform:
@@ -1120,6 +1123,50 @@ Transform:
   - {fileID: 624219978}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1881484553 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5048054565758722832, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+  m_PrefabInstance: {fileID: 401793439}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1881484555 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5513669554627588752, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+  m_PrefabInstance: {fileID: 401793439}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881484553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f19cd312b58f0a04ca08fe5fd3332561, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1881484558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881484553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 846db8c63b964fa98a32f2478749d3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToListen: {fileID: 11400000, guid: 73829eba445cb804bbf063e72efbcd23, type: 2}
+  onEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1881484555}
+        m_TargetAssemblyTypeName: TexasShootEm.EntityController, Assembly-CSharp
+        m_MethodName: Shoot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2038041952
 GameObject:
   m_ObjectHideFlags: 0
