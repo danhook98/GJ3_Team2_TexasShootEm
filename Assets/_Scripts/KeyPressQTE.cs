@@ -33,6 +33,8 @@ namespace TexasShootEm
         
         private GameObject _arrowContainer;
 
+        private float _qteScore = 0;
+
         private void Awake()
         {
             _keyGenerator = new RandomKeyPressGenerator();
@@ -56,11 +58,20 @@ namespace TexasShootEm
             if (_queuedKeys.Count == 0) return; 
             
             Key key = _keyGenerator.GetKeyFromDirection(input);
-
-            // TODO: if the key isn't the right one, remove it anyway and don't contribute towards the score.
+            float numOfKeysToPress = numberOfKeysToPress;
+            
             if (key == _queuedKeys[0])
             {
                 Debug.Log("Valid key pressed in sequence!");
+                _qteScore += 1/numOfKeysToPress;
+                Debug.Log(_qteScore);
+                _queuedKeys.RemoveAt(0);
+                Destroy(_arrowObjects[0].gameObject);
+                _arrowObjects.RemoveAt(0);
+            }
+            else if (key != _queuedKeys[0])
+            {
+                Debug.Log("Invalid key pressed in sequence!");
                 _queuedKeys.RemoveAt(0);
                 Destroy(_arrowObjects[0].gameObject);
                 _arrowObjects.RemoveAt(0);
@@ -70,7 +81,8 @@ namespace TexasShootEm
             if (_queuedKeys.Count == 0)
             {
                 // TODO: calculate score percentage to send
-                sendScoreEvent.Invoke(0f);
+                Debug.Log(_qteScore);
+                sendScoreEvent.Invoke(_qteScore);
                 _keyPressQteActive = false;
             }
         }
