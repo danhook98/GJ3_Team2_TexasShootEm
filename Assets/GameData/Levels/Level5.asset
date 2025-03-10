@@ -20,3 +20,4 @@ MonoBehaviour:
   AccuracySliderData: {fileID: 0}
   HasKeyPresses: 1
   KeyPresses: 3
+  NextLevel: {fileID: 11400000, guid: 8824987b9a0ac8f429bf21162d31291f, type: 2}

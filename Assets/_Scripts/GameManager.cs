@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using TexasShootEm.EventSystem;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace TexasShootEm
 {
@@ -11,6 +12,9 @@ namespace TexasShootEm
         
         [Header("Core Events")]
         [SerializeField] private VoidEvent gameWonEvent;
+
+        [Header("Canvas Events")] 
+        [SerializeField] private VoidEvent showWinCanvasEvent;
 
         [Header("Accuracy Slider Events")] 
         [SerializeField] private AccuracySliderDataSOEvent sendSliderData;
@@ -99,13 +103,17 @@ namespace TexasShootEm
             }
         }
 
-        private void PlayerWon()
+        private IEnumerator PlayerWon()
         {
             // Stop the timer.
             pauseTimerEvent.Invoke(new Empty());
             
             // Broadcast the game won event. 
             gameWonEvent.Invoke(new Empty());
+            
+            // Small delay so that the player can see the animations play before the canvas appears
+            yield return new WaitForSeconds(3f);
+            showWinCanvasEvent.Invoke(new Empty());
         }
 
         private void DisplaySlider()
@@ -131,13 +139,13 @@ namespace TexasShootEm
                 return; 
             }
             
-            PlayerWon();
+            StartCoroutine(PlayerWon());
         }
 
         public void PassKeyPressScore(float score)
         {
             // do whatever with the score.
-            PlayerWon();
+            StartCoroutine(PlayerWon());
         }
 
         public void TimeExpired()
@@ -145,6 +153,26 @@ namespace TexasShootEm
             Debug.Log("<color=red>Game Manager: </color>Time expired.");
             // Enemy shoot
             // Player death
+        }
+
+        private void UnlockNextLevel(ref LevelSO nextLevel)
+        {
+            nextLevel.Unlocked = true;
+            
+            // Set the level as '1' (true) in PlayerPrefs.
+            PlayerPrefs.SetInt(nextLevel.name, 1);
+        }
+
+        public void LoadNextLevel()
+        {
+            ref LevelSO nextLevelSO = ref levelToLoad.loadedLevel.NextLevel;
+
+            if (!nextLevelSO) return; 
+            
+            UnlockNextLevel(ref nextLevelSO);
+            
+            levelToLoad.loadedLevel = nextLevelSO;
+            SceneManager.LoadScene("MainGame");
         }
     }
 }

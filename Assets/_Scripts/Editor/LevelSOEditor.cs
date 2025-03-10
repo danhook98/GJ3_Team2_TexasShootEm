@@ -14,6 +14,7 @@ namespace TexasShootEm
         private SerializedProperty _accuracySliderData;
         private SerializedProperty _hasKeyPressesProperty;
         private SerializedProperty _keyPresses;
+        private SerializedProperty _nextLevelProperty;
         
         private string[] difficultyList = { "Beginner", "Intermediate", "Expert" };
         private int selectedIndex = 0;
@@ -28,6 +29,7 @@ namespace TexasShootEm
             _accuracySliderData = serializedObject.FindProperty("AccuracySliderData");
             _hasKeyPressesProperty = serializedObject.FindProperty("HasKeyPresses");
             _keyPresses = serializedObject.FindProperty("KeyPresses");
+            _nextLevelProperty = serializedObject.FindProperty("NextLevel");
             
             // Ensure that the index of the dropdown is the same as what's saved in the LevelSO data.
             selectedIndex = Array.IndexOf(difficultyList, _difficultyProperty.stringValue);
@@ -58,6 +60,8 @@ namespace TexasShootEm
             
             EditorGUILayout.PropertyField(_hasKeyPressesProperty);
             EditorGUILayout.PropertyField(_keyPresses);
+            
+            EditorGUILayout.PropertyField(_nextLevelProperty);
             
             serializedObject.ApplyModifiedProperties();
         }
