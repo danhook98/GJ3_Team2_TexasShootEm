@@ -65,17 +65,10 @@ namespace TexasShootEm
                 Debug.Log("Valid key pressed in sequence!");
                 _qteScore += 1/numOfKeysToPress;
                 Debug.Log(_qteScore);
-                _queuedKeys.RemoveAt(0);
-                Destroy(_arrowObjects[0].gameObject);
-                _arrowObjects.RemoveAt(0);
             }
-            else if (key != _queuedKeys[0])
-            {
-                Debug.Log("Invalid key pressed in sequence!");
-                _queuedKeys.RemoveAt(0);
-                Destroy(_arrowObjects[0].gameObject);
-                _arrowObjects.RemoveAt(0);
-            }
+            _queuedKeys.RemoveAt(0);
+            Destroy(_arrowObjects[0].gameObject);
+            _arrowObjects.RemoveAt(0);
             
             // This was the last key.
             if (_queuedKeys.Count == 0)

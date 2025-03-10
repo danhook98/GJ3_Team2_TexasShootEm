@@ -9,7 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf56b5240ce390b4e944c4fae9668b37, type: 3}
-  m_Name: LevelLoadLink
+  m_Script: {fileID: 11500000, guid: 5e5ccf1786bd47e6b4b78b273b370a0d, type: 3}
+  m_Name: onShowMedals
   m_EditorClassIdentifier: 
-  loadedLevel: {fileID: 11400000, guid: 113c4edfaee039d479741592b7ce1db9, type: 2}
