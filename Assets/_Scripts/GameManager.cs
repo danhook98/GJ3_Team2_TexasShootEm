@@ -31,7 +31,9 @@ namespace TexasShootEm
         private bool _gameCanRun = true;
 
         private bool _displaySlider = false;
+        private bool _sliderWasDisplayed = false;
         private bool _displayQTE = false;
+        private bool _QTEWasDisplayed = false;
 
         private void Awake()
         {
@@ -83,13 +85,37 @@ namespace TexasShootEm
             
             startTimerEvent.Invoke(new Empty());
 
+            // Initial interactable display. 
             if ((_displaySlider && !_displayQTE) || (_displaySlider && _displayQTE))
             {
-                showAccuracySliderEvent.Invoke(true);
+                DisplaySlider();
             }
             else if (!_displaySlider && _displayQTE)
             {
-                showKeyPressEvent.Invoke(new Empty());
+                DisplayQTE();
+            }
+        }
+
+        private void DisplaySlider()
+        {
+            showAccuracySliderEvent.Invoke(true);
+            _sliderWasDisplayed = true;
+        }
+
+        private void DisplayQTE()
+        {
+            showKeyPressEvent.Invoke(new Empty());
+            _QTEWasDisplayed = true;
+        }
+
+        // Slider score = 0f - 1f in 0.25f increments for each zone.
+        public void PassSliderScore(float score)
+        {
+            // do whatever with the score.
+
+            if (_displayQTE)
+            {
+                DisplayQTE();
             }
         }
 

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using TexasShootEm.EventSystem;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -11,6 +12,9 @@ namespace TexasShootEm
         [SerializeField] private InputReader inputReader; 
         [SerializeField] private Slider accuracySlider;
         [SerializeField] private AnimationCurve lerpCurve;
+        
+        [Header("Events")]
+        [SerializeField] private FloatEvent sendScoreEvent;
         
         [Header("Slider Zones")]
         [SerializeField] private RectTransform[] sliderZones;
@@ -62,6 +66,10 @@ namespace TexasShootEm
         
             _accuracyScore = 1 - absoluteValue;
             Debug.Log(_accuracyScore);
+            
+            // TODO: Replace _accuracyScore below with the correct calculated percentage, e.g. 0.25f
+            sendScoreEvent.Invoke(_accuracyScore); 
+            _sliderActive = false;
         }
 
         private void CalculateValueChange()

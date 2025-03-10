@@ -772,6 +772,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  sendScoreEvent: {fileID: 11400000, guid: e02f5277146a1584b8f144c74f1ed167, type: 2}
   sliderZones:
   - {fileID: 5754948280841678907}
   - {fileID: 8976664712612820983}
