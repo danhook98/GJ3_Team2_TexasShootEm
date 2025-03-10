@@ -91,15 +91,12 @@ namespace TexasShootEm
         
         public void LoadData(AccuracySliderDataSO sliderData)
         {
-            _accuracySliderData = sliderData;
             Debug.Log("Loading slider data");
+            _accuracySliderData = sliderData;
             SetSliderZones();
+            difficultyMultiplier = sliderData.PointerSpeed;
         }
         
         public void DisplaySlider(bool state) => _sliderActive = state;
-        
-        // Redundant for now, let's wait and see...
-        // public void SetDifficulty(float newMultiplier) => difficultyMultiplier = newMultiplier;
-        // public void ResetAccuracySlider() => _isSliderPaused = false;
     }
 }
