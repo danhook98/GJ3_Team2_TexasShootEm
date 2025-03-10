@@ -50,6 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelToLoad: {fileID: 11400000, guid: d7d9314381ad8cb4e95903bdfc9c665e, type: 2}
   gameWonEvent: {fileID: 11400000, guid: 73829eba445cb804bbf063e72efbcd23, type: 2}
+  showWinCanvasEvent: {fileID: 11400000, guid: e79c14026629957469b90b19d4bd11df, type: 2}
   sendSliderData: {fileID: 11400000, guid: 2274ae9613cae3b44957f978554ac2e2, type: 2}
   showAccuracySliderEvent: {fileID: 11400000, guid: 08569719e33ecda44965f5d96261fcf1, type: 2}
   sendKeyPressesEvent: {fileID: 11400000, guid: 9dc100497d42f6048a09773a1edaf70f, type: 2}
@@ -159,4 +160,16 @@ MonoBehaviour:
   eventToListen: {fileID: 11400000, guid: 778b192dd5f8af04b871c8be851f362c, type: 2}
   onEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5898756976303363941}
+        m_TargetAssemblyTypeName: TexasShootEm.GameManager, Assembly-CSharp
+        m_MethodName: LoadNextLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
