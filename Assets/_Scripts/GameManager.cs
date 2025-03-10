@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using TexasShootEm.EventSystem;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace TexasShootEm
 {
@@ -145,6 +146,17 @@ namespace TexasShootEm
             Debug.Log("<color=red>Game Manager: </color>Time expired.");
             // Enemy shoot
             // Player death
+        }
+
+        public void LoadNextLevel()
+        {
+            LevelSO nextLevelSO = levelToLoad.loadedLevel.NextLevel;
+
+            if (nextLevelSO == null) return; 
+            
+            levelToLoad.loadedLevel.NextLevel.Unlocked = true;
+            levelToLoad.loadedLevel = levelToLoad.loadedLevel.NextLevel;
+            SceneManager.LoadScene("MainGame");
         }
     }
 }
