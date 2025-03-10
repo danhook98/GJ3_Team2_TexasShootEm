@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b4f88c4c70584e40b3a8ae2798f3f42, type: 3}
+  m_Name: Level1
+  m_EditorClassIdentifier: 
+  LevelNumber: 1
+  Difficulty: Beginner
+  Unlocked: 1
+  LevelTime: 30
+  HasAccuracySlider: 1
+  AccuracySliderData: {fileID: 11400000, guid: 84f070756854a204e91bfe0c34409f95, type: 2}
+  HasKeyPresses: 1
+  KeyPresses: 6
+  NextLevel: {fileID: 11400000, guid: 05e751431252cef43a088a73bda634ba, type: 2}
