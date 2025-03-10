@@ -13,6 +13,9 @@ namespace TexasShootEm
         [Header("Core Events")]
         [SerializeField] private VoidEvent gameWonEvent;
 
+        [Header("Canvas Events")] 
+        [SerializeField] private VoidEvent showWinCanvasEvent;
+
         [Header("Accuracy Slider Events")] 
         [SerializeField] private AccuracySliderDataSOEvent sendSliderData;
         [SerializeField] private BoolEvent showAccuracySliderEvent;
@@ -100,13 +103,17 @@ namespace TexasShootEm
             }
         }
 
-        private void PlayerWon()
+        private IEnumerator PlayerWon()
         {
             // Stop the timer.
             pauseTimerEvent.Invoke(new Empty());
             
             // Broadcast the game won event. 
             gameWonEvent.Invoke(new Empty());
+            
+            // Small delay so that the player can see the animations play before the canvas appears
+            yield return new WaitForSeconds(3f);
+            showWinCanvasEvent.Invoke(new Empty());
         }
 
         private void DisplaySlider()
@@ -132,13 +139,13 @@ namespace TexasShootEm
                 return; 
             }
             
-            PlayerWon();
+            StartCoroutine(PlayerWon());
         }
 
         public void PassKeyPressScore(float score)
         {
             // do whatever with the score.
-            PlayerWon();
+            StartCoroutine(PlayerWon());
         }
 
         public void TimeExpired()
