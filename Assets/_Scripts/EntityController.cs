@@ -47,19 +47,7 @@ namespace TexasShootEm
             _entityAnim.SetTrigger("StayDead");
         }
 
-        private IEnumerator EntityAim()
-        {
-            if (_isDead) yield return null;
-            
-            Debug.Log("Starting aim coroutine");
-            _entityAnim.SetTrigger("Aim");
-            entityAim.Invoke(new Empty());
-            yield return new WaitForSeconds(0.5f);
-            _entityAnim.SetTrigger("StayAiming");
-        }
-
         public void Shoot() => StartCoroutine(EntityShoot());
         public void Death() => StartCoroutine(EntityDeath());
-        public void Aim() => StartCoroutine(EntityAim());
     }
 }
