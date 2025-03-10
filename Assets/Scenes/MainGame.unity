@@ -130,9 +130,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1535171198}
     m_Modifications:
+    - target: {fileID: 1439797810459019838, guid: a0316270e85407d419127c90f0be2c56, type: 3}
+      propertyPath: eventToTrigger
+      value: 
+      objectReference: {fileID: 11400000, guid: 778b192dd5f8af04b871c8be851f362c, type: 2}
     - target: {fileID: 3881585831926439667, guid: a0316270e85407d419127c90f0be2c56, type: 3}
       propertyPath: m_Name
       value: Win Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065393482863004364, guid: a0316270e85407d419127c90f0be2c56, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6759461183488237225, guid: a0316270e85407d419127c90f0be2c56, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Trigger
       objectReference: {fileID: 0}
     - target: {fileID: 8492752371573316429, guid: a0316270e85407d419127c90f0be2c56, type: 3}
       propertyPath: m_Pivot.x
