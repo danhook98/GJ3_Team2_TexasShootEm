@@ -128,7 +128,10 @@ namespace TexasShootEm
             if (_displayQTE)
             {
                 DisplayQTE();
+                return; 
             }
+            
+            PlayerWon();
         }
 
         public void PassKeyPressScore(float score)
