@@ -1,10 +1,7 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 namespace TexasShootEm
 {
@@ -20,14 +17,20 @@ namespace TexasShootEm
 
         private void Awake()
         {
+            if (!levelSO) return;
+            
             titleText.text = $"Level {levelSO.LevelNumber}";
             difficultyText.text = levelSO.Difficulty;
 
+            // First level is always unlocked.
+            if (levelSO.LevelNumber == 1) return;
+            
             UpdatePlayButton();
-        }
+        }   
 
         private void UpdatePlayButton()
         {
+            levelSO.Unlocked = PlayerPrefs.GetInt(levelSO.name, 0) == 1;
             playButton.interactable = levelSO.Unlocked;
             buttonText.text = levelSO.Unlocked ? "Play" : "Locked";
         }
