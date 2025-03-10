@@ -45,7 +45,7 @@ namespace TexasShootEm
 
         private float _qteScore;
         private float _sliderScore;
-        private int _scoreTrack;
+        private int _scoreTrack = 1;
 
         private void Awake()
         {
@@ -159,7 +159,6 @@ namespace TexasShootEm
         {
             // do whatever with the score.
             _sliderScore = score;
-            _scoreTrack++;
             
             if (_displayQTE)
             {
