@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3457921769404399388
+--- !u!1 &1426656208180538918
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,38 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8623629281226516162}
-  - component: {fileID: 7574821172572987673}
-  - component: {fileID: 3543112306300114639}
+  - component: {fileID: 8460632381936193021}
+  - component: {fileID: 4881934611465866793}
+  - component: {fileID: 8752729887906680067}
+  - component: {fileID: 6978460057222753240}
+  - component: {fileID: 4902388748361945433}
   m_Layer: 0
   m_Name: Evil Tubbo
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8623629281226516162
+--- !u!4 &8460632381936193021
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3457921769404399388}
+  m_GameObject: {fileID: 1426656208180538918}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.65, y: -3.31, z: 0}
-  m_LocalScale: {x: -5, y: 5, z: 1}
+  m_LocalPosition: {x: -1.0519, y: -0.36204, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &7574821172572987673
+--- !u!212 &4881934611465866793
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3457921769404399388}
+  m_GameObject: {fileID: 1426656208180538918}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -71,47 +73,84 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1984187651
-  m_SortingLayer: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: df6c72e79bd128d479d326ad0ab777f2, type: 3}
+  m_Sprite: {fileID: -203017917, guid: df6c72e79bd128d479d326ad0ab777f2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.28, y: 1.28}
+  m_Size: {x: 0.64, y: 0.54}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3543112306300114639
+--- !u!95 &8752729887906680067
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426656208180538918}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 202cefe244eb150469f0d189db5369c2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6978460057222753240
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3457921769404399388}
+  m_GameObject: {fileID: 1426656208180538918}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Script: {fileID: 11500000, guid: f19cd312b58f0a04ca08fe5fd3332561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
-  m_ComponentVersion: 1
-  m_HasRenderer: 1
-  m_UseRendererSilhouette: 1
-  m_CastsShadows: 1
-  m_SelfShadows: 0
-  m_ApplyToSortingLayers: 00000000fdb2bb89
-  m_ShapePath:
-  - {x: -0.08446391, y: -0.28754187, z: 0}
-  - {x: 0.17031243, y: -0.28163138, z: 0}
-  - {x: 0.14396623, y: -0.2330881, z: 0}
-  - {x: -0.10174039, y: -0.22875175, z: 0}
-  m_ShapePathHash: 813302607
-  m_Mesh: {fileID: 0}
-  m_InstanceId: -14516
-  m_LocalBounds:
-    m_Center: {x: 0.034286022, y: -0.25814682, z: 0}
-    m_Extent: {x: 0.13602641, y: 0.029395059, z: 0}
+  entityShoot: {fileID: 11400000, guid: fae6a77b6b3a9c749ac73283e8008dcb, type: 2}
+  entityDeath: {fileID: 11400000, guid: a36452a17bbd01743b68fbc1aa4434d4, type: 2}
+  entityAim: {fileID: 11400000, guid: 8bd338124b435a847aa1605995e97280, type: 2}
+  playSfx: {fileID: 11400000, guid: 60f412faab172d24ab24c015a4296c9d, type: 2}
+  entityDeathSfx: {fileID: 11400000, guid: 8e7bcf5498f1fdb4e83e0b827418cb04, type: 2}
+  entityShootSfx: {fileID: 11400000, guid: 9d59716d71c965943bb5347625321701, type: 2}
+--- !u!114 &4902388748361945433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426656208180538918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 846db8c63b964fa98a32f2478749d3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToListen: {fileID: 11400000, guid: c47e0a36040aa4d4b87e243a493f9136, type: 2}
+  onEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6978460057222753240}
+        m_TargetAssemblyTypeName: TexasShootEm.EntityController, Assembly-CSharp
+        m_MethodName: Shoot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

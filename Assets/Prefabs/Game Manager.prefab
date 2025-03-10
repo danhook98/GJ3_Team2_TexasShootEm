@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2604553072769244998
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4503786417044690033}
+  - component: {fileID: 5898756976303363941}
+  - component: {fileID: 1571820183641981543}
+  - component: {fileID: 6056855227178211009}
+  - component: {fileID: 2610043354473479408}
+  m_Layer: 0
+  m_Name: Game Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4503786417044690033
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2604553072769244998}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5898756976303363941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2604553072769244998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d01352c704b87e145bebb7e73646e9a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelToLoad: {fileID: 11400000, guid: d7d9314381ad8cb4e95903bdfc9c665e, type: 2}
+  gameWonEvent: {fileID: 11400000, guid: 73829eba445cb804bbf063e72efbcd23, type: 2}
+  sendSliderData: {fileID: 11400000, guid: 2274ae9613cae3b44957f978554ac2e2, type: 2}
+  showAccuracySliderEvent: {fileID: 11400000, guid: 08569719e33ecda44965f5d96261fcf1, type: 2}
+  sendKeyPressesEvent: {fileID: 11400000, guid: 9dc100497d42f6048a09773a1edaf70f, type: 2}
+  showKeyPressEvent: {fileID: 11400000, guid: 436ca2bf278a6cf4095d6fae2c92ab90, type: 2}
+  setTimerEvent: {fileID: 11400000, guid: 5aa080d46ac174a4bb12e8850c176528, type: 2}
+  modifyTimerEvent: {fileID: 11400000, guid: fbbe9924665f78c479ce907ba6a880ee, type: 2}
+  startTimerEvent: {fileID: 11400000, guid: 99dc763cc5fae964196676e6bf5a4287, type: 2}
+  pauseTimerEvent: {fileID: 11400000, guid: 089c1e203daa9c640918e4e321369d4a, type: 2}
+  playSfxEvent: {fileID: 11400000, guid: 60f412faab172d24ab24c015a4296c9d, type: 2}
+  sfxCountdown: {fileID: 11400000, guid: d1b98d2b1e46e614cb17aa79a6fbfad8, type: 2}
+--- !u!114 &1571820183641981543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2604553072769244998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 846db8c63b964fa98a32f2478749d3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToListen: {fileID: 11400000, guid: c47e0a36040aa4d4b87e243a493f9136, type: 2}
+  onEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5898756976303363941}
+        m_TargetAssemblyTypeName: TexasShootEm.GameManager, Assembly-CSharp
+        m_MethodName: TimeExpired
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6056855227178211009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2604553072769244998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5ce7556aa404addb76cf4413fd7d964, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToListen: {fileID: 11400000, guid: e02f5277146a1584b8f144c74f1ed167, type: 2}
+  onEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5898756976303363941}
+        m_TargetAssemblyTypeName: TexasShootEm.GameManager, Assembly-CSharp
+        m_MethodName: PassSliderScore
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2610043354473479408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2604553072769244998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5ce7556aa404addb76cf4413fd7d964, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToListen: {fileID: 11400000, guid: 9a19769badcd490419f1e09dbdb052c1, type: 2}
+  onEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5898756976303363941}
+        m_TargetAssemblyTypeName: TexasShootEm.GameManager, Assembly-CSharp
+        m_MethodName: PassKeyPressScore
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
