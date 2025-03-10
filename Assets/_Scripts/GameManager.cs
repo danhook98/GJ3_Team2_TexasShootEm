@@ -14,6 +14,7 @@ namespace TexasShootEm
 
         [Header("Canvas Events")] 
         [SerializeField] private VoidEvent showWinCanvasEvent;
+        [SerializeField] private IntEvent showMedalsEvent;
 
         [Header("Accuracy Slider Events")] 
         [SerializeField] private AccuracySliderDataSOEvent sendSliderData;
@@ -40,6 +41,10 @@ namespace TexasShootEm
         private bool _sliderWasDisplayed = false;
         private bool _displayQTE = false;
         private bool _QTEWasDisplayed = false;
+
+        private float _qteScore;
+        private float _sliderScore;
+        private int _scoreTrack;
 
         private void Awake()
         {
@@ -110,6 +115,27 @@ namespace TexasShootEm
             // Broadcast the game won event. 
             gameWonEvent.Invoke(new Empty());
             
+            float finalScore = (_sliderScore + _qteScore)/_scoreTrack;
+            int numMedals = 0;
+
+            switch (finalScore) // Pass how many medals should be shown based on score.
+            {
+                case < 0.2f:
+                    break;
+                case < 0.4f:
+                    numMedals = 1;
+                    break;
+                case < 0.85f:
+                    numMedals = 2;
+                    break;
+                case <= 1f:
+                    numMedals = 3;
+                    break;
+            }
+            
+            // < 0.2 = No Medals < 0.4 = Bronze, < 0.85 = Silver, < 1 = Gold
+            showMedalsEvent.Invoke(numMedals);
+            
             // Small delay so that the player can see the animations play before the canvas appears
             yield return new WaitForSeconds(3f);
             showWinCanvasEvent.Invoke(new Empty());
@@ -131,9 +157,12 @@ namespace TexasShootEm
         public void PassSliderScore(float score)
         {
             // do whatever with the score.
-
+            _sliderScore = score;
+            _scoreTrack++;
+            
             if (_displayQTE)
             {
+                _scoreTrack++;
                 DisplayQTE();
                 return; 
             }
@@ -143,6 +172,7 @@ namespace TexasShootEm
 
         public void PassKeyPressScore(float score)
         {
+            _qteScore = score;
             // do whatever with the score.
             StartCoroutine(PlayerWon());
         }

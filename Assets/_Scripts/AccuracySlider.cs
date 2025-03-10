@@ -1,8 +1,5 @@
-using System;
-using System.Collections.Generic;
 using TexasShootEm.EventSystem;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace TexasShootEm
@@ -24,24 +21,16 @@ namespace TexasShootEm
         private AccuracySliderDataSO _accuracySliderData;
     
         private bool _sliderActive = false;
-        
         private float _accuracyScore;
         private float _valueChange; 
         private bool _isSliderPaused;
-    
-        // These score ranges need to be overwritten in the LoadData method down below.
-        private Dictionary<string, float> scoreResults;
-        private float _perfectScoreRange = 0.9f;
-        private float _goodScoreRange = 0.6f;
-        private float _okayScoreRange = 0.3f;
-        private float _badScoreRange;
-        private float _missScoreRange;
-
+        private float _sliderScore;
+        private float[] _zoneScoring; 
+        
         private void Awake()
         {
-            scoreResults = new Dictionary<string, float>();
             _isSliderPaused = false;
-            AddNewScoreResults();
+            _zoneScoring = new float[4];
         }
 
         private void OnEnable() => inputReader.OnAimEvent += GetSliderValue;
@@ -59,16 +48,25 @@ namespace TexasShootEm
             // Prevent user input from doing anything if the slider isn't active. 
             if (!_sliderActive) return; 
             
-            // For scoring, score ranges from 0 to 1, closer to the middle of the bar closer to a value of 1.
             _isSliderPaused = true;
             
             float absoluteValue = Mathf.Abs(accuracySlider.value);
         
             _accuracyScore = 1 - absoluteValue;
-            Debug.Log(_accuracyScore);
             
-            // TODO: Replace _accuracyScore below with the correct calculated percentage, e.g. 0.25f
-            sendScoreEvent.Invoke(_accuracyScore); 
+            // 0 = Bad, 1 = Okay, 2 = Good, 3 = Perfect
+            // Each of these hold their range value, if accuracy score is less than the range value of these, it's
+            // the value of the one below
+            for (int i = _zoneScoring.Length - 1; i >= 0; i--)
+            {
+                if (_accuracyScore > _zoneScoring[i])
+                {
+                    _sliderScore = 0.25f * (i + 1);
+                    break;
+                }
+            }
+            
+            sendScoreEvent.Invoke(_sliderScore); 
             _sliderActive = false;
         }
 
@@ -78,25 +76,19 @@ namespace TexasShootEm
             _valueChange = lerpCurve.Evaluate(pingPongValue);
             accuracySlider.value = _valueChange;
         }
-
-        private void AddNewScoreResults()
-        {
-            scoreResults.Add("Perfect!", _perfectScoreRange);
-            scoreResults.Add("Good!", _goodScoreRange);
-            scoreResults.Add("Okay!", _okayScoreRange);
-            scoreResults.Add("Bad!", _badScoreRange);
-            scoreResults.Add("Miss!", _missScoreRange);
-        }
-
+        
         private void SetSliderZones()
         {
             for (int i = 0; i < sliderZones.Length; i++)
             {
-                float xScale = 1 - _accuracySliderData.sliderData[i].RangeStart;
+                float rangeStart = _accuracySliderData.sliderData[i].RangeStart;
+                float xScale = 1 - rangeStart;
                 sliderZones[i].localScale = new Vector3(xScale, 1f, 1f);
+                
+                _zoneScoring[i] = rangeStart;
             }
         }
-
+        
         public void LoadData(AccuracySliderDataSO sliderData)
         {
             _accuracySliderData = sliderData;
