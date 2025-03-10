@@ -28,7 +28,10 @@ namespace TexasShootEm
         [Space] 
         [SerializeField] private AudioClipSO sfxCountdown;
 
-        private bool _gameCanRun = true; 
+        private bool _gameCanRun = true;
+
+        private bool _displaySlider = false;
+        private bool _displayQTE = false;
 
         private void Awake()
         {
@@ -47,6 +50,27 @@ namespace TexasShootEm
                 return; 
             }
         }
+        
+        private void LoadLevel()
+        {
+            Debug.Log("<color=red>Game Manager: </color>Loading level...");
+            
+            if (levelToLoad.loadedLevel.HasAccuracySlider)
+            {
+                Debug.Log("Sending slider data");
+                sendSliderData.Invoke(levelToLoad.loadedLevel.AccuracySliderData);
+                _displaySlider = true;
+            }
+
+            if (levelToLoad.loadedLevel.HasKeyPresses)
+            {
+                Debug.Log("Sending key press QTE data");
+                sendKeyPressesEvent.Invoke(levelToLoad.loadedLevel.KeyPresses);
+                _displayQTE = true;
+            }
+            
+            setTimerEvent.Invoke(levelToLoad.loadedLevel.LevelTime);
+        }
 
         private IEnumerator Start()
         {
@@ -58,34 +82,15 @@ namespace TexasShootEm
             yield return new WaitForSeconds(3f);
             
             startTimerEvent.Invoke(new Empty());
-        }
 
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if ((_displaySlider && !_displayQTE) || (_displaySlider && _displayQTE))
             {
                 showAccuracySliderEvent.Invoke(true);
+            }
+            else if (!_displaySlider && _displayQTE)
+            {
                 showKeyPressEvent.Invoke(new Empty());
             }
-        }
-
-        private void LoadLevel()
-        {
-            Debug.Log("<color=red>Game Manager: </color>Loading level...");
-            
-            if (levelToLoad.loadedLevel.HasAccuracySlider)
-            {
-                Debug.Log("Sending slider data");
-                sendSliderData.Invoke(levelToLoad.loadedLevel.AccuracySliderData);
-            }
-
-            if (levelToLoad.loadedLevel.HasKeyPresses)
-            {
-                Debug.Log("Sending key press QTE data");
-                sendKeyPressesEvent.Invoke(levelToLoad.loadedLevel.KeyPresses); 
-            }
-            
-            setTimerEvent.Invoke(levelToLoad.loadedLevel.LevelTime);
         }
 
         public void TimeExpired()

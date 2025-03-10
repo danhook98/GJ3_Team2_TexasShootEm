@@ -96,6 +96,8 @@ namespace TexasShootEm
             SetSliderZones();
         }
         
+        public void DisplaySlider(bool state) => _sliderActive = state;
+        
         // Redundant for now, let's wait and see...
         // public void SetDifficulty(float newMultiplier) => difficultyMultiplier = newMultiplier;
         // public void ResetAccuracySlider() => _isSliderPaused = false;
