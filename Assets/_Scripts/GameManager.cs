@@ -155,14 +155,23 @@ namespace TexasShootEm
             // Player death
         }
 
+        private void UnlockNextLevel(ref LevelSO nextLevel)
+        {
+            nextLevel.Unlocked = true;
+            
+            // Set the level as '1' (true) in PlayerPrefs.
+            PlayerPrefs.SetInt(nextLevel.name, 1);
+        }
+
         public void LoadNextLevel()
         {
-            LevelSO nextLevelSO = levelToLoad.loadedLevel.NextLevel;
+            ref LevelSO nextLevelSO = ref levelToLoad.loadedLevel.NextLevel;
 
-            if (nextLevelSO == null) return; 
+            if (!nextLevelSO) return; 
             
-            levelToLoad.loadedLevel.NextLevel.Unlocked = true;
-            levelToLoad.loadedLevel = levelToLoad.loadedLevel.NextLevel;
+            UnlockNextLevel(ref nextLevelSO);
+            
+            levelToLoad.loadedLevel = nextLevelSO;
             SceneManager.LoadScene("MainGame");
         }
     }
