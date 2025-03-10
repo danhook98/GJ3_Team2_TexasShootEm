@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf56b5240ce390b4e944c4fae9668b37, type: 3}
   m_Name: LevelLoadLink
   m_EditorClassIdentifier: 
-  loadedLevel: {fileID: 0}
+  loadedLevel: {fileID: 11400000, guid: 113c4edfaee039d479741592b7ce1db9, type: 2}
