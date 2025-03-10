@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8752729887906680067}
   - component: {fileID: 6978460057222753240}
   - component: {fileID: 4902388748361945433}
+  - component: {fileID: 3730896798463433740}
   m_Layer: 0
   m_Name: Evil Tubbo
   m_TagString: Enemy
@@ -145,6 +146,34 @@ MonoBehaviour:
       - m_Target: {fileID: 6978460057222753240}
         m_TargetAssemblyTypeName: TexasShootEm.EntityController, Assembly-CSharp
         m_MethodName: Shoot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3730896798463433740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426656208180538918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 846db8c63b964fa98a32f2478749d3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToListen: {fileID: 11400000, guid: dbe60c3a80345104e877ad33757abd41, type: 2}
+  onEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6978460057222753240}
+        m_TargetAssemblyTypeName: TexasShootEm.EntityController, Assembly-CSharp
+        m_MethodName: Death
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

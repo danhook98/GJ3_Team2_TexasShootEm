@@ -32,8 +32,8 @@ namespace TexasShootEm
             _entityAnim.SetTrigger("Shoot");
             yield return new WaitForSeconds(0.2f);
             playSfx.Invoke(entityShootSfx);
-            entityShoot.Invoke(new Empty());
             yield return new WaitForSeconds(0.5f);
+            entityShoot.Invoke(new Empty());
         }
         
         private IEnumerator EntityDeath()
