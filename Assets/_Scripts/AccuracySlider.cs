@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using TexasShootEm.EventSystem;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -12,16 +13,23 @@ namespace TexasShootEm
         [SerializeField] private Slider accuracySlider;
         [SerializeField] private AnimationCurve lerpCurve;
         
+        [Header("Events")]
+        [SerializeField] private FloatEvent sendScoreEvent;
+        
         [Header("Slider Zones")]
         [SerializeField] private RectTransform[] sliderZones;
-        [SerializeField] private AccuracySliderDataSO accuracySliderData;
     
         [SerializeField] private float difficultyMultiplier = 0.25f;
+        
+        private AccuracySliderDataSO _accuracySliderData;
     
+        private bool _sliderActive = false;
+        
         private float _accuracyScore;
         private float _valueChange; 
         private bool _isSliderPaused;
     
+        // These score ranges need to be overwritten in the LoadData method down below.
         private Dictionary<string, float> scoreResults;
         private float _perfectScoreRange = 0.9f;
         private float _goodScoreRange = 0.6f;
@@ -41,20 +49,16 @@ namespace TexasShootEm
 
         private void Update()
         {
-            if (!_isSliderPaused)
-            {
-                CalculateValueChange();
-            }
-
-            // For Testing
-            if (Input.GetKeyDown(KeyCode.T))
-            {
-                ResetAccuracySlider();
-            }
+            if (_isSliderPaused || !_sliderActive) return;
+            
+            CalculateValueChange();
         }
 
         private void GetSliderValue()
         {
+            // Prevent user input from doing anything if the slider isn't active. 
+            if (!_sliderActive) return; 
+            
             // For scoring, score ranges from 0 to 1, closer to the middle of the bar closer to a value of 1.
             _isSliderPaused = true;
             
@@ -62,6 +66,10 @@ namespace TexasShootEm
         
             _accuracyScore = 1 - absoluteValue;
             Debug.Log(_accuracyScore);
+            
+            // TODO: Replace _accuracyScore below with the correct calculated percentage, e.g. 0.25f
+            sendScoreEvent.Invoke(_accuracyScore); 
+            _sliderActive = false;
         }
 
         private void CalculateValueChange()
@@ -84,19 +92,22 @@ namespace TexasShootEm
         {
             for (int i = 0; i < sliderZones.Length; i++)
             {
-                float xScale = 1 - accuracySliderData.sliderData[i].RangeStart;
+                float xScale = 1 - _accuracySliderData.sliderData[i].RangeStart;
                 sliderZones[i].localScale = new Vector3(xScale, 1f, 1f);
             }
         }
 
         public void LoadData(AccuracySliderDataSO sliderData)
         {
-            accuracySliderData = sliderData;
+            _accuracySliderData = sliderData;
             Debug.Log("Loading slider data");
             SetSliderZones();
         }
         
-        public void SetDifficulty(float newMultiplier) => difficultyMultiplier = newMultiplier;
-        public void ResetAccuracySlider() => _isSliderPaused = false;
+        public void DisplaySlider(bool state) => _sliderActive = state;
+        
+        // Redundant for now, let's wait and see...
+        // public void SetDifficulty(float newMultiplier) => difficultyMultiplier = newMultiplier;
+        // public void ResetAccuracySlider() => _isSliderPaused = false;
     }
 }

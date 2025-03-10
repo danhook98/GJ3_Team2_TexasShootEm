@@ -24,38 +24,19 @@ namespace TexasShootEm
             _entityAnim = GetComponent<Animator>();
         }
 
-        private void Update() // TODO: Remove this, this is here only for testing purposes.
+        private IEnumerator EntityShoot()
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                StartCoroutine(EntityShoot());
-            }
-
-            if (Input.GetKeyDown(KeyCode.T))
-            {
-                StartCoroutine(EntityDeath());
-            }
-
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                StartCoroutine(EntityAim());
-            }
-        }
-
-        public IEnumerator EntityShoot()
-        {
-            if (!_isDead) // Condition needed to avoid playing gunshot SFX when dead.
-            {
-                Debug.Log("Starting shoot coroutine");
-                _entityAnim.SetTrigger("Shoot");
-                yield return new WaitForSeconds(0.2f);
-                playSfx.Invoke(entityShootSfx);
-                entityShoot.Invoke(new Empty());
-                yield return new WaitForSeconds(0.5f);
-            }
+            if (_isDead) yield break; // Condition needed to avoid playing gunshot SFX when dead.
+            
+            Debug.Log("Starting shoot coroutine");
+            _entityAnim.SetTrigger("Shoot");
+            yield return new WaitForSeconds(0.2f);
+            playSfx.Invoke(entityShootSfx);
+            entityShoot.Invoke(new Empty());
+            yield return new WaitForSeconds(0.5f);
         }
         
-        public IEnumerator EntityDeath()
+        private IEnumerator EntityDeath()
         {
             _isDead = true;
             Debug.Log("Starting death coroutine");
@@ -66,15 +47,7 @@ namespace TexasShootEm
             _entityAnim.SetTrigger("StayDead");
         }
 
-        public IEnumerator EntityAim()
-        {
-            if (_isDead) yield return null;
-            
-            Debug.Log("Starting aim coroutine");
-            _entityAnim.SetTrigger("Aim");
-            entityAim.Invoke(new Empty());
-            yield return new WaitForSeconds(0.5f);
-            _entityAnim.SetTrigger("StayAiming");
-        }
+        public void Shoot() => StartCoroutine(EntityShoot());
+        public void Death() => StartCoroutine(EntityDeath());
     }
 }
