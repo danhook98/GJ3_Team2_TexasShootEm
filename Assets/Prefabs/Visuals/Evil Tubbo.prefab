@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6978460057222753240}
   - component: {fileID: 4902388748361945433}
   - component: {fileID: 3730896798463433740}
+  - component: {fileID: 1832396623473423574}
   m_Layer: 0
   m_Name: Evil Tubbo
   m_TagString: Enemy
@@ -74,8 +75,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1984187651
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -203017917, guid: df6c72e79bd128d479d326ad0ab777f2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -183,3 +184,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1832396623473423574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426656208180538918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000fdb2bb89
+  m_ShapePath:
+  - {x: -0.42918694, y: 0.01429843, z: 0}
+  - {x: -0.37199312, y: 0.15385246, z: 0}
+  - {x: -0.20017819, y: 0.14312887, z: 0}
+  - {x: -0.1644321, y: 0.01787296, z: 0}
+  m_ShapePathHash: -867347803
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -7882
+  m_LocalBounds:
+    m_Center: {x: -0.29680952, y: 0.08407545, z: 0}
+    m_Extent: {x: 0.13237742, y: 0.06977702, z: 0}

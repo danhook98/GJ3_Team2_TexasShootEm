@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8738951299522332066}
   - component: {fileID: 2089571449447848106}
   - component: {fileID: 5188912119432864758}
+  - component: {fileID: 2494816306130193353}
   m_Layer: 0
   m_Name: Sheriff Tubbo
   m_TagString: Untagged
@@ -212,3 +213,34 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2494816306130193353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5048054565758722832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000fdb2bb89
+  m_ShapePath:
+  - {x: 0.33765233, y: 0.01227823, z: 0}
+  - {x: 0.2670523, y: 0.07826963, z: 0}
+  - {x: 0.29897362, y: 0.13304074, z: 0}
+  - {x: 0.38492152, y: 0.13304074, z: 0}
+  - {x: 0.43870446, y: 0.00920867, z: 0}
+  m_ShapePathHash: -741752189
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -9210
+  m_LocalBounds:
+    m_Center: {x: 0.3528784, y: 0.0711247, z: 0}
+    m_Extent: {x: 0.085826084, y: 0.061916035, z: 0}
