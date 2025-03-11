@@ -552,7 +552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
       propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
       propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -560,7 +560,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
       propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
       propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -569,7 +569,7 @@ PrefabInstance:
     - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
       propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 5254390877585672541, guid: d996dff7a40b5a0418403502852c2fae, type: 3}
+      objectReference: {fileID: 401793444}
     - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
       propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
@@ -580,11 +580,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
       propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SpawnBullet
+      value: ShootRight
       objectReference: {fileID: 0}
     - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
       propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: SetDirection
+      value: SpawnBullet
       objectReference: {fileID: 0}
     - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
       propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -592,7 +592,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
       propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: TexasShootEm.BulletController, Assembly-CSharp
+      value: TexasShootEm.EntityController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
       propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_FloatArgument
@@ -600,7 +600,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
       propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_FloatArgument
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
       propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -643,7 +643,15 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8738951299522332066, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8738951299522332066, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
       propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 401793444}
+    - target: {fileID: 8738951299522332066, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 401793444}
     - target: {fileID: 8738951299522332066, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
@@ -651,15 +659,31 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8738951299522332066, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8738951299522332066, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
       propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Death
+      value: SpawnBullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 8738951299522332066, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SpawnBullet
       objectReference: {fileID: 0}
     - target: {fileID: 8738951299522332066, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
       propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: TexasShootEm.EntityController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8738951299522332066, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: TexasShootEm.EntityController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8738951299522332066, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
       propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8738951299522332066, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -700,7 +724,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 345710606}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 846db8c63b964fa98a32f2478749d3ea, type: 3}
   m_Name: 
