@@ -1139,12 +1139,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3129905787304356441, guid: ec8d1c7cd51cabf4695ad353e3fd6057, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3129905787304356441, guid: ec8d1c7cd51cabf4695ad353e3fd6057, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3129905787304356441, guid: ec8d1c7cd51cabf4695ad353e3fd6057, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3129905787304356441, guid: ec8d1c7cd51cabf4695ad353e3fd6057, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1569872320}
     - target: {fileID: 3129905787304356441, guid: ec8d1c7cd51cabf4695ad353e3fd6057, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
@@ -1154,12 +1162,24 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3129905787304356441, guid: ec8d1c7cd51cabf4695ad353e3fd6057, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Trigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 3129905787304356441, guid: ec8d1c7cd51cabf4695ad353e3fd6057, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
       value: Trigger
       objectReference: {fileID: 0}
     - target: {fileID: 3129905787304356441, guid: ec8d1c7cd51cabf4695ad353e3fd6057, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: TexasShootEm.EventSystem.VoidEventTrigger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3129905787304356441, guid: ec8d1c7cd51cabf4695ad353e3fd6057, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
       value: TexasShootEm.EventSystem.VoidEventTrigger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3129905787304356441, guid: ec8d1c7cd51cabf4695ad353e3fd6057, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3129905787304356441, guid: ec8d1c7cd51cabf4695ad353e3fd6057, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1266,11 +1286,19 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7649192083448040992, guid: ec8d1c7cd51cabf4695ad353e3fd6057, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7649192083448040992, guid: ec8d1c7cd51cabf4695ad353e3fd6057, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 327111294}
     - target: {fileID: 7649192083448040992, guid: ec8d1c7cd51cabf4695ad353e3fd6057, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7649192083448040992, guid: ec8d1c7cd51cabf4695ad353e3fd6057, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7649192083448040992, guid: ec8d1c7cd51cabf4695ad353e3fd6057, type: 3}
@@ -1282,6 +1310,10 @@ PrefabInstance:
       value: TexasShootEm.EventSystem.VoidEventTrigger, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7649192083448040992, guid: ec8d1c7cd51cabf4695ad353e3fd6057, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: TexasShootEm.EventSystem.VoidEventTrigger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7649192083448040992, guid: ec8d1c7cd51cabf4695ad353e3fd6057, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
@@ -1289,6 +1321,10 @@ PrefabInstance:
       propertyPath: eventToListen
       value: 
       objectReference: {fileID: 11400000, guid: 9ce91885624366c4d9df2f22f16b9f7a, type: 2}
+    - target: {fileID: 9188653730815184996, guid: ec8d1c7cd51cabf4695ad353e3fd6057, type: 3}
+      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1311,35 +1347,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1488553372420424100, guid: ec8d1c7cd51cabf4695ad353e3fd6057, type: 3}
   m_PrefabInstance: {fileID: 473107227}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &495507079 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8689640237852372602, guid: cfc725dbe148dff4c89718c314fb1698, type: 3}
-  m_PrefabInstance: {fileID: 1312733716}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &495507081 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7637736904894564772, guid: cfc725dbe148dff4c89718c314fb1698, type: 3}
   m_PrefabInstance: {fileID: 1312733716}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 495507079}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36c627e0e8f149c6b5822d32acda4f5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &495507086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 495507079}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a094bcdc19c41c5b00b500f878565fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventToTrigger: {fileID: 11400000, guid: 9ce91885624366c4d9df2f22f16b9f7a, type: 2}
 --- !u!1001 &518025967
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2625,7 +2643,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 767032411747312027, guid: cfc725dbe148dff4c89718c314fb1698, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 767032411747312027, guid: cfc725dbe148dff4c89718c314fb1698, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -2646,7 +2664,7 @@ PrefabInstance:
     - target: {fileID: 767032411747312027, guid: cfc725dbe148dff4c89718c314fb1698, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 495507086}
+      objectReference: {fileID: 0}
     - target: {fileID: 767032411747312027, guid: cfc725dbe148dff4c89718c314fb1698, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: set_enabled
@@ -2763,6 +2781,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1469122617093968634, guid: cfc725dbe148dff4c89718c314fb1698, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1570130363002930543, guid: cfc725dbe148dff4c89718c314fb1698, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2863,10 +2885,7 @@ PrefabInstance:
     - {fileID: 4757130025426083634, guid: cfc725dbe148dff4c89718c314fb1698, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8689640237852372602, guid: cfc725dbe148dff4c89718c314fb1698, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 495507086}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfc725dbe148dff4c89718c314fb1698, type: 3}
 --- !u!224 &1312733717 stripped
 RectTransform:
