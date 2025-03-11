@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using TexasShootEm.EventSystem;
-using UnityEngine.Serialization;
 
 namespace TexasShootEm
 {
@@ -19,13 +18,11 @@ namespace TexasShootEm
 
         [Header("Bullet Related")] 
         [SerializeField] private Transform bulletSpawn;
-        [SerializeField] private GameObject bullet;
-        [SerializeField] private VoidEvent spawnBullet;
-        [SerializeField] private FloatEvent setBulletDir;
+        [SerializeField] private BulletController bullet;
+        [SerializeField] private bool shootRight = true;
 
         private Animator _entityAnim;
         private bool _isDead = false;
-        private bool _shootRight = true;
 
         private void Awake()
         {
@@ -38,10 +35,14 @@ namespace TexasShootEm
             
             Debug.Log("Starting shoot coroutine");
             _entityAnim.SetTrigger("Shoot");
-            yield return new WaitForSeconds(0.3f);
-            playSfx.Invoke(entityShootSfx);
-            spawnBullet.Invoke(new Empty());
+            
             yield return new WaitForSeconds(0.5f);
+            
+            playSfx.Invoke(entityShootSfx);
+            SpawnBullet();
+            
+            yield return new WaitForSeconds(0.5f);
+            
             entityShoot.Invoke(new Empty());
         }
         
@@ -56,20 +57,20 @@ namespace TexasShootEm
             _entityAnim.SetTrigger("StayDead");
         }
 
-        public void SpawnBullet()
+        private void Update()
         {
-            Debug.Log("Spawning bullet");
-            GameObject spawnedBullet = Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation);
-            
-            float direction = _shootRight ? 1 : -1;
-            setBulletDir.Invoke(direction);
-            
-            BulletController bulletController = spawnedBullet.GetComponent<BulletController>();
-            bulletController.SetDirection(direction);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                SpawnBullet();
+            }
+        }
+
+        private void SpawnBullet()
+        {
+            BulletController spawnedBullet = Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation);
+            spawnedBullet.SetDirection(shootRight);
         }
         
-        public void ShootRight() => _shootRight = true;
-        public void ShootLeft() => _shootRight = false;
         public void Shoot() => StartCoroutine(EntityShoot());
         public void Death() => StartCoroutine(EntityDeath());
     }

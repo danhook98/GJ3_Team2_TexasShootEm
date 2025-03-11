@@ -497,11 +497,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &345710606 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5048054565758722832, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-  m_PrefabInstance: {fileID: 401793439}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &401793439
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -550,241 +545,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 401793444}
-    - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 401793444}
-    - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: ShootRight
-      objectReference: {fileID: 0}
-    - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: SpawnBullet
-      objectReference: {fileID: 0}
-    - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: TexasShootEm.EntityController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: TexasShootEm.EntityController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_FloatArgument
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_FloatArgument
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 5048054565758722832, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
       propertyPath: m_Name
       value: Sheriff Tubbo
       objectReference: {fileID: 0}
-    - target: {fileID: 5188912119432864758, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5513669554627588752, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: bullet
-      value: 
-      objectReference: {fileID: 3620900106843576643, guid: d996dff7a40b5a0418403502852c2fae, type: 3}
-    - target: {fileID: 5513669554627588752, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: bulletSpawn
-      value: 
-      objectReference: {fileID: 767356529}
-    - target: {fileID: 5513669554627588752, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: spawnBullet
-      value: 
-      objectReference: {fileID: 11400000, guid: 293edd9b7a5743f42a433a5f78aecf25, type: 2}
-    - target: {fileID: 5513669554627588752, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: setBulletDir
-      value: 
-      objectReference: {fileID: 11400000, guid: fdf25def93b7de849b60d16ec9ca04f6, type: 2}
-    - target: {fileID: 8738951299522332066, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8738951299522332066, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8738951299522332066, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8738951299522332066, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 401793444}
-    - target: {fileID: 8738951299522332066, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 401793444}
-    - target: {fileID: 8738951299522332066, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8738951299522332066, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8738951299522332066, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SpawnBullet
-      objectReference: {fileID: 0}
-    - target: {fileID: 8738951299522332066, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: SpawnBullet
-      objectReference: {fileID: 0}
-    - target: {fileID: 8738951299522332066, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: TexasShootEm.EntityController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8738951299522332066, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: TexasShootEm.EntityController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8738951299522332066, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 8738951299522332066, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5188912119432864758, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 943254160532824252, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 767356529}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5048054565758722832, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 401793447}
-    - targetCorrespondingSourceObject: {fileID: 5048054565758722832, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 401793448}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
 --- !u!4 &401793440 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 943254160532824252, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
   m_PrefabInstance: {fileID: 401793439}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &401793444 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5513669554627588752, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-  m_PrefabInstance: {fileID: 401793439}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 345710606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f19cd312b58f0a04ca08fe5fd3332561, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &401793447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 345710606}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 846db8c63b964fa98a32f2478749d3ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventToListen: {fileID: 11400000, guid: 293edd9b7a5743f42a433a5f78aecf25, type: 2}
-  onEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 401793444}
-        m_TargetAssemblyTypeName: TexasShootEm.EntityController, Assembly-CSharp
-        m_MethodName: ShootRight
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 401793444}
-        m_TargetAssemblyTypeName: TexasShootEm.EntityController, Assembly-CSharp
-        m_MethodName: SpawnBullet
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &401793448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 345710606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5ce7556aa404addb76cf4413fd7d964, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventToListen: {fileID: 11400000, guid: fdf25def93b7de849b60d16ec9ca04f6, type: 2}
-  onEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5254390877585672541, guid: d996dff7a40b5a0418403502852c2fae, type: 3}
-        m_TargetAssemblyTypeName: TexasShootEm.BulletController, Assembly-CSharp
-        m_MethodName: SetDirection
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1001 &429910044
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1040,82 +814,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Evil Tubbo
       objectReference: {fileID: 0}
-    - target: {fileID: 4902388748361945433, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4902388748361945433, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4902388748361945433, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4902388748361945433, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1083123737}
-    - target: {fileID: 4902388748361945433, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 1083123737}
-    - target: {fileID: 4902388748361945433, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4902388748361945433, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4902388748361945433, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: ShootLeft
-      objectReference: {fileID: 0}
-    - target: {fileID: 4902388748361945433, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: SpawnBullet
-      objectReference: {fileID: 0}
-    - target: {fileID: 4902388748361945433, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: TexasShootEm.EntityController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4902388748361945433, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: TexasShootEm.EntityController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4902388748361945433, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_FloatArgument
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4902388748361945433, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_FloatArgument
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4902388748361945433, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4902388748361945433, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6978460057222753240, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
-      propertyPath: bullet
-      value: 
-      objectReference: {fileID: 3620900106843576643, guid: d996dff7a40b5a0418403502852c2fae, type: 3}
-    - target: {fileID: 6978460057222753240, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
-      propertyPath: bulletSpawn
-      value: 
-      objectReference: {fileID: 1019779637}
-    - target: {fileID: 6978460057222753240, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
-      propertyPath: spawnBullet
-      value: 
-      objectReference: {fileID: 11400000, guid: 293edd9b7a5743f42a433a5f78aecf25, type: 2}
-    - target: {fileID: 6978460057222753240, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
-      propertyPath: setBulletDir
-      value: 
-      objectReference: {fileID: 11400000, guid: fdf25def93b7de849b60d16ec9ca04f6, type: 2}
     - target: {fileID: 8460632381936193021, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5
@@ -1158,14 +856,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 8460632381936193021, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1019779637}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1426656208180538918, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1083123740}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
 --- !u!4 &617281085 stripped
 Transform:
@@ -1274,37 +966,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7249646444973981458, guid: 78c2c3e042bf0354f8b7d1ba9b0048db, type: 3}
   m_PrefabInstance: {fileID: 624219977}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &767356528
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 767356529}
-  m_Layer: 0
-  m_Name: BulletSpawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &767356529
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 767356528}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0.182, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 401793440}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &868863587
 GameObject:
   m_ObjectHideFlags: 0
@@ -1338,81 +999,6 @@ Transform:
   - {fileID: 1234430034}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1019779636
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1019779637}
-  m_Layer: 0
-  m_Name: EvilBulletSpawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1019779637
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1019779636}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5, y: 0.182, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 617281085}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1083123734 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1426656208180538918, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
-  m_PrefabInstance: {fileID: 617281084}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1083123737 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6978460057222753240, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
-  m_PrefabInstance: {fileID: 617281084}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1083123734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f19cd312b58f0a04ca08fe5fd3332561, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1083123740
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1083123734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5ce7556aa404addb76cf4413fd7d964, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventToListen: {fileID: 11400000, guid: fdf25def93b7de849b60d16ec9ca04f6, type: 2}
-  onEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5254390877585672541, guid: d996dff7a40b5a0418403502852c2fae, type: 3}
-        m_TargetAssemblyTypeName: TexasShootEm.BulletController, Assembly-CSharp
-        m_MethodName: SetDirection
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1091342733
 GameObject:
   m_ObjectHideFlags: 0

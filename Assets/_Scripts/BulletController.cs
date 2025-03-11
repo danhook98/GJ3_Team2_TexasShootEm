@@ -20,11 +20,10 @@ namespace TexasShootEm
             _rigidbody.velocity = new Vector2(_direction * moveSpeed * Time.deltaTime, _rigidbody.velocity.y);
         }
 
-        public void SetDirection(float direction)
+        public void SetDirection(bool shootRight)
         {
-            Debug.Log("Direction: " + _direction);
-            _direction = direction;
-            transform.localScale = new Vector3(direction * 3, 3, 3);
+            _direction = shootRight ? 1 : -1;
+            //transform.localScale = new Vector3(direction * 3, 3, 3);
         }
     }
 }
