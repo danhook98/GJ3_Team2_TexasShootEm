@@ -1,41 +1,45 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem.Android.LowLevel;
 using UnityEngine.UI;
 
-namespace TexasShootEm { }
-
-public class CountdownController : MonoBehaviour
+namespace TexasShootEm
 {
-    private int countdownTime;
-    public GameObject countdownDisplay;
-
-    private void Start()
+    public class CountdownController : MonoBehaviour
     {
-        StartCoroutine(CountdownToStart());
-        //countdownDisplay = GetComponent<Text>();
-        countdownTime=3;
-    }
+        private TextMeshProUGUI _countdownDisplay;
+        private int _countdownTime;
 
-    IEnumerator CountdownToStart()
-    {
-        while (countdownTime > 0)
+        private void Awake()
         {
-            //countdownDisplay.text = countdownTime.ToString();
+            _countdownDisplay = GetComponent<TextMeshProUGUI>();
+        }
+
+        private void Start()
+        {
+            _countdownTime = 3;
+            StartCoroutine(CountdownToStart());
+        }
+
+        private IEnumerator CountdownToStart()
+        {
+            while (_countdownTime > 0)
+            {
+                _countdownDisplay.text = _countdownTime.ToString();
+
+                yield return new WaitForSeconds(1f);
+
+                _countdownTime--;
+            }
+
+            _countdownDisplay.text = "Draw!";
 
             yield return new WaitForSeconds(1f);
 
-            countdownTime--;
+            _countdownDisplay.gameObject.SetActive(false);
         }
-
-        //countdownDisplay.text = "GO!";
-
-        
-
-        yield return new WaitForSeconds(1f);
-
-        countdownDisplay.gameObject.SetActive(false);
     }
 }
-    
