@@ -14,3 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelNumber: 9
   Difficulty: Intermediate
+  Unlocked: 0
+  LevelTime: 20
+  HasAccuracySlider: 1
+  AccuracySliderData: {fileID: 11400000, guid: c02674e5e4bc76d448f620b642216863, type: 2}
+  HasKeyPresses: 1
+  KeyPresses: 4
+  NextLevel: {fileID: 11400000, guid: a05439ab9a3d2784da52d277fcc6f4d4, type: 2}

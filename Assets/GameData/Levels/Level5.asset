@@ -14,3 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelNumber: 5
   Difficulty: Beginner
+  Unlocked: 0
+  LevelTime: 25
+  HasAccuracySlider: 0
+  AccuracySliderData: {fileID: 0}
+  HasKeyPresses: 1
+  KeyPresses: 3
+  NextLevel: {fileID: 11400000, guid: 8824987b9a0ac8f429bf21162d31291f, type: 2}
