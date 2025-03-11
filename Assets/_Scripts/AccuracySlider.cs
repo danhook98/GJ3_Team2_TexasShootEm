@@ -12,6 +12,7 @@ namespace TexasShootEm
         
         [Header("Events")]
         [SerializeField] private FloatEvent sendScoreEvent;
+        [SerializeField] private FloatEvent sendTimerPenaltyEvent;
         
         [Header("Slider Zones")]
         [SerializeField] private RectTransform[] sliderZones;
@@ -62,6 +63,11 @@ namespace TexasShootEm
                 if (_accuracyScore > _zoneScoring[i])
                 {
                     _sliderScore = 0.25f * (i + 1);
+                    
+                    // Send the time penalty. 
+                    float penalty = _accuracySliderData.sliderData[i].TimePenalty;
+                    if (penalty != 0) sendTimerPenaltyEvent.Invoke(penalty);
+                    
                     break;
                 }
             }
