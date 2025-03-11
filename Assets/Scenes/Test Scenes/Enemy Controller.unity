@@ -282,6 +282,89 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1360285873
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 943254160532824252, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 943254160532824252, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 943254160532824252, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 943254160532824252, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 943254160532824252, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 943254160532824252, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 943254160532824252, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 943254160532824252, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 943254160532824252, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 943254160532824252, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5048054565758722832, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      propertyPath: m_Name
+      value: Sheriff Tubbo
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5048054565758722832, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1360285876}
+  m_SourcePrefab: {fileID: 100100000, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+--- !u!1 &1360285874 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5048054565758722832, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+  m_PrefabInstance: {fileID: 1360285873}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1360285876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360285874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f19cd312b58f0a04ca08fe5fd3332561, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entityShoot: {fileID: 11400000, guid: dbe60c3a80345104e877ad33757abd41, type: 2}
+  entityDeath: {fileID: 11400000, guid: 00bcb67c27258ef449d92e5ef51642fe, type: 2}
+  entityAim: {fileID: 11400000, guid: 8bd338124b435a847aa1605995e97280, type: 2}
+  playSfx: {fileID: 11400000, guid: 60f412faab172d24ab24c015a4296c9d, type: 2}
+  entityDeathSfx: {fileID: 11400000, guid: 8e7bcf5498f1fdb4e83e0b827418cb04, type: 2}
+  entityShootSfx: {fileID: 11400000, guid: 9d59716d71c965943bb5347625321701, type: 2}
 --- !u!1001 &1564707195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -339,92 +422,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fd2b91b4174aa045b8dcd869d62199a, type: 3}
---- !u!1001 &1704299899
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 943254160532824252, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2.1314
-      objectReference: {fileID: 0}
-    - target: {fileID: 943254160532824252, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2.1314
-      objectReference: {fileID: 0}
-    - target: {fileID: 943254160532824252, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2.1314
-      objectReference: {fileID: 0}
-    - target: {fileID: 943254160532824252, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -8.1281
-      objectReference: {fileID: 0}
-    - target: {fileID: 943254160532824252, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.36204
-      objectReference: {fileID: 0}
-    - target: {fileID: 943254160532824252, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 943254160532824252, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 943254160532824252, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 943254160532824252, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 943254160532824252, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 943254160532824252, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 943254160532824252, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 943254160532824252, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5048054565758722832, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: m_Name
-      value: Sheriff Tubbo
-      objectReference: {fileID: 0}
-    - target: {fileID: 7465544803885367409, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: m_Size.x
-      value: 0.54
-      objectReference: {fileID: 0}
-    - target: {fileID: 7465544803885367409, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: m_Size.y
-      value: 0.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 7465544803885367409, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 1263731063, guid: 5effb738abd70034cb77fb1f922db4e1, type: 3}
-    - target: {fileID: 7465544803885367409, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
---- !u!1001 &1867497531265451446
+--- !u!1001 &1961733872
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -479,14 +477,40 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1426656208180538918, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1961733875}
   m_SourcePrefab: {fileID: 100100000, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
+--- !u!1 &1961733873 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1426656208180538918, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
+  m_PrefabInstance: {fileID: 1961733872}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1961733875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961733873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f19cd312b58f0a04ca08fe5fd3332561, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entityShoot: {fileID: 11400000, guid: fae6a77b6b3a9c749ac73283e8008dcb, type: 2}
+  entityDeath: {fileID: 11400000, guid: a36452a17bbd01743b68fbc1aa4434d4, type: 2}
+  entityAim: {fileID: 11400000, guid: 8bd338124b435a847aa1605995e97280, type: 2}
+  playSfx: {fileID: 11400000, guid: 60f412faab172d24ab24c015a4296c9d, type: 2}
+  entityDeathSfx: {fileID: 11400000, guid: 8e7bcf5498f1fdb4e83e0b827418cb04, type: 2}
+  entityShootSfx: {fileID: 11400000, guid: 9d59716d71c965943bb5347625321701, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 262054694}
   - {fileID: 570014234}
-  - {fileID: 1704299899}
-  - {fileID: 1867497531265451446}
   - {fileID: 1564707195}
+  - {fileID: 1961733872}
+  - {fileID: 1360285873}

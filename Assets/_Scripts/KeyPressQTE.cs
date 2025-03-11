@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TexasShootEm.EventSystem;
 using UnityEngine;
 
 namespace TexasShootEm
@@ -7,6 +8,9 @@ namespace TexasShootEm
     public class KeyPressQTE : MonoBehaviour
     {
         [SerializeField] private InputReader inputReader;
+        
+        [Header("Events")]
+        [SerializeField] private FloatEvent sendScoreEvent;
         
         [Header("Key Press Variables")]
         [SerializeField] private int numberOfKeysToPress = 2;
@@ -17,6 +21,8 @@ namespace TexasShootEm
         [Header("Key Game Object")] 
         [SerializeField] private Arrow[] arrowPrefabs;
         
+        private bool _keyPressQteActive = false;
+        
         private RandomKeyPressGenerator _keyGenerator;
         private List<Key> _queuedKeys;
         private List<Arrow> _arrowObjects;
@@ -26,6 +32,8 @@ namespace TexasShootEm
         private Vector2 _arrowDisplayPosition;
         
         private GameObject _arrowContainer;
+
+        private float _qteScore = 0;
 
         private void Awake()
         {
@@ -42,28 +50,33 @@ namespace TexasShootEm
 
         private void OnEnable() => inputReader.OnDirectionalEvent += KeyPress;
         private void OnDisable() => inputReader.OnDirectionalEvent -= KeyPress;
-
-        private void Update()
-        {
-            // FOR TESTING ONLY.
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                GenerateKeys(numberOfKeysToPress);
-            }
-        }
         
         private void KeyPress(Vector2 input)
         {
+            if (!_keyPressQteActive) return; 
+            
             if (_queuedKeys.Count == 0) return; 
             
-            var key = _keyGenerator.GetKeyFromDirection(input);
-
+            Key key = _keyGenerator.GetKeyFromDirection(input);
+            float numOfKeysToPress = numberOfKeysToPress;
+            
             if (key == _queuedKeys[0])
             {
                 Debug.Log("Valid key pressed in sequence!");
-                _queuedKeys.RemoveAt(0);
-                Destroy(_arrowObjects[0].gameObject);
-                _arrowObjects.RemoveAt(0);
+                _qteScore += 1/numOfKeysToPress;
+                Debug.Log(_qteScore);
+            }
+            _queuedKeys.RemoveAt(0);
+            Destroy(_arrowObjects[0].gameObject);
+            _arrowObjects.RemoveAt(0);
+            
+            // This was the last key.
+            if (_queuedKeys.Count == 0)
+            {
+                // TODO: calculate score percentage to send
+                Debug.Log(_qteScore);
+                sendScoreEvent.Invoke(_qteScore);
+                _keyPressQteActive = false;
             }
         }
 
@@ -72,11 +85,6 @@ namespace TexasShootEm
             RandomKeyPressGenerator.GenerateKeys(ref _queuedKeys, numberOfKeys);
             
             SpawnArrows(numberOfKeys);
-                
-            foreach (Key key in _queuedKeys)
-            {
-                Debug.Log(key);
-            }
         }
 
         private void SpawnArrows(int arrowsToSpawn)
@@ -107,5 +115,13 @@ namespace TexasShootEm
             _arrowContainer.transform.SetParent(transform);
             _arrowContainer.name = "ArrowContainer";
         }
+
+        public void ActivateKeyPressQTE()
+        {
+            _keyPressQteActive = true;
+            GenerateKeys(numberOfKeysToPress);
+        }
+        
+        public void LoadData(int value) => numberOfKeysToPress = value;
     }
 }

@@ -8,7 +8,7 @@ namespace TexasShootEm
         [Header("0 = Bad, 1 = Okay, 2 = Good, 3 = Perfect")]
         public SliderData[] sliderData = new SliderData[4];
 
-        [Range(0.25f, 3f)]
+        [Range(0.25f, 6f)]
         public float PointerSpeed = 0.25f;
     }
     

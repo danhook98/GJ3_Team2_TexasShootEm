@@ -21,5 +21,8 @@ namespace TexasShootEm
         [Space]
         public bool HasKeyPresses;
         public int KeyPresses = 0;
+        [Space]
+        
+        public LevelSO NextLevel = default;
     }
 }
