@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using TexasShootEm.EventSystem;
+using UnityEngine.Serialization;
 
 namespace TexasShootEm
 {
@@ -19,10 +20,12 @@ namespace TexasShootEm
         [Header("Bullet Related")] 
         [SerializeField] private Transform bulletSpawn;
         [SerializeField] private GameObject bullet;
-        [SerializeField] private VoidEvent setBulletDir;
+        [SerializeField] private VoidEvent spawnBullet;
+        [SerializeField] private FloatEvent setBulletDir;
 
         private Animator _entityAnim;
         private bool _isDead = false;
+        private bool _shootRight = true;
 
         private void Awake()
         {
@@ -37,7 +40,7 @@ namespace TexasShootEm
             _entityAnim.SetTrigger("Shoot");
             yield return new WaitForSeconds(0.3f);
             playSfx.Invoke(entityShootSfx);
-            setBulletDir.Invoke(new Empty());
+            spawnBullet.Invoke(new Empty());
             yield return new WaitForSeconds(0.5f);
             entityShoot.Invoke(new Empty());
         }
@@ -56,9 +59,17 @@ namespace TexasShootEm
         public void SpawnBullet()
         {
             Debug.Log("Spawning bullet");
-            Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation);
-        } 
-
+            GameObject spawnedBullet = Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation);
+            
+            float direction = _shootRight ? 1 : -1;
+            setBulletDir.Invoke(direction);
+            
+            BulletController bulletController = spawnedBullet.GetComponent<BulletController>();
+            bulletController.SetDirection(direction);
+        }
+        
+        public void ShootRight() => _shootRight = true;
+        public void ShootLeft() => _shootRight = false;
         public void Shoot() => StartCoroutine(EntityShoot());
         public void Death() => StartCoroutine(EntityDeath());
     }
