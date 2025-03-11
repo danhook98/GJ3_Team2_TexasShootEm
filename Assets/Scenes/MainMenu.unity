@@ -1284,17 +1284,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6845250647005819195, guid: 4fd2b91b4174aa045b8dcd869d62199a, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 4c39178d624d2d84d8d288f31cf7af79, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5934738281344533260, guid: 4fd2b91b4174aa045b8dcd869d62199a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1958518501}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fd2b91b4174aa045b8dcd869d62199a, type: 3}
 --- !u!1 &619394800
 GameObject:
@@ -3774,50 +3767,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a463e9c38daaacd4ca9ef39d75ee7506, type: 3}
---- !u!1 &1958518494 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5934738281344533260, guid: 4fd2b91b4174aa045b8dcd869d62199a, type: 3}
-  m_PrefabInstance: {fileID: 569065980}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1958518499 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6219241646105901813, guid: 4fd2b91b4174aa045b8dcd869d62199a, type: 3}
-  m_PrefabInstance: {fileID: 569065980}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1958518494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ff893f055659b540888edf821aefc0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1958518501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1958518494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 846db8c63b964fa98a32f2478749d3ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventToListen: {fileID: 11400000, guid: 2f29abf1cb4005049a74bd3f32608ea6, type: 2}
-  onEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1958518499}
-        m_TargetAssemblyTypeName: TexasShootEm.AudioManager, Assembly-CSharp
-        m_MethodName: PlayOneShotSFX
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 9d59716d71c965943bb5347625321701, type: 2}
-          m_ObjectArgumentAssemblyTypeName: TexasShootEm.AudioClipSO, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
