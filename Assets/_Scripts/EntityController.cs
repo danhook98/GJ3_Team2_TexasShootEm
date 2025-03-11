@@ -16,6 +16,11 @@ namespace TexasShootEm
         [SerializeField] private AudioClipSO entityDeathSfx;
         [SerializeField] private AudioClipSO entityShootSfx;
 
+        [Header("Bullet Related")] 
+        [SerializeField] private Transform bulletSpawn;
+        [SerializeField] private BulletController bullet;
+        [SerializeField] private bool shootRight = true;
+
         private Animator _entityAnim;
         private bool _isDead = false;
 
@@ -30,9 +35,14 @@ namespace TexasShootEm
             
             Debug.Log("Starting shoot coroutine");
             _entityAnim.SetTrigger("Shoot");
-            yield return new WaitForSeconds(0.2f);
-            playSfx.Invoke(entityShootSfx);
+            
             yield return new WaitForSeconds(0.5f);
+            
+            playSfx.Invoke(entityShootSfx);
+            SpawnBullet();
+            
+            yield return new WaitForSeconds(0.5f);
+            
             entityShoot.Invoke(new Empty());
         }
         
@@ -47,6 +57,20 @@ namespace TexasShootEm
             _entityAnim.SetTrigger("StayDead");
         }
 
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                SpawnBullet();
+            }
+        }
+
+        private void SpawnBullet()
+        {
+            BulletController spawnedBullet = Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation);
+            spawnedBullet.SetDirection(shootRight);
+        }
+        
         public void Shoot() => StartCoroutine(EntityShoot());
         public void Death() => StartCoroutine(EntityDeath());
     }
