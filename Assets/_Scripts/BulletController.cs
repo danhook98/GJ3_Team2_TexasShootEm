@@ -1,47 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace TexasShootEm
 {
     public class BulletController : MonoBehaviour
     {
         [SerializeField] private float moveSpeed;
-        [SerializeField] private float _lifeTime;
+        [SerializeField] private float lifeTime;
         private Rigidbody2D _rigidbody;
         private float _direction = 1f;
-
-        private void Awake()
-        {
-            _rigidbody = GetComponent<Rigidbody2D>();
-        }
-
+        
         private void Start()
         {
-            Destroy(this.gameObject, _lifeTime);
+            _rigidbody = GetComponent<Rigidbody2D>();
+            Destroy(this.gameObject, lifeTime);
         }
         
         private void Update()
         {
             _rigidbody.velocity = new Vector2(_direction * moveSpeed * Time.deltaTime, _rigidbody.velocity.y);
-
-            // TODO: Testing purposes only, remove after testing.
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                SetDirection(-1);
-            }
-
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                SetDirection(1);
-            }
         }
 
         public void SetDirection(float direction)
         {
+            Debug.Log("Direction: " + direction);
             _direction = direction;
-            this.transform.localScale = new Vector3(direction, 1, 1);
+            transform.localScale = new Vector3(direction * 3, 3, 3);
         }
     }
 }

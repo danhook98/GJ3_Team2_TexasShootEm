@@ -545,13 +545,88 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 5254390877585672541, guid: d996dff7a40b5a0418403502852c2fae, type: 3}
+    - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 5254390877585672541, guid: d996dff7a40b5a0418403502852c2fae, type: 3}
+    - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetDirection
+      objectReference: {fileID: 0}
+    - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetDirection
+      objectReference: {fileID: 0}
+    - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: TexasShootEm.BulletController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: TexasShootEm.BulletController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_FloatArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_FloatArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2089571449447848106, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5048054565758722832, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
       propertyPath: m_Name
       value: Sheriff Tubbo
       objectReference: {fileID: 0}
+    - target: {fileID: 5513669554627588752, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 3620900106843576643, guid: d996dff7a40b5a0418403502852c2fae, type: 3}
+    - target: {fileID: 5513669554627588752, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      propertyPath: bulletSpawn
+      value: 
+      objectReference: {fileID: 767356529}
+    - target: {fileID: 5513669554627588752, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      propertyPath: setBulletDir
+      value: 
+      objectReference: {fileID: 11400000, guid: 98da88a70de487444b3c39530f3b0b5d, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 943254160532824252, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 767356529}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 103045da8feeb9b49a164c2f21fa7c66, type: 3}
 --- !u!4 &401793440 stripped
@@ -814,6 +889,50 @@ PrefabInstance:
       propertyPath: m_Name
       value: Evil Tubbo
       objectReference: {fileID: 0}
+    - target: {fileID: 4902388748361945433, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
+      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4902388748361945433, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
+      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4902388748361945433, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
+      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 5254390877585672541, guid: d996dff7a40b5a0418403502852c2fae, type: 3}
+    - target: {fileID: 4902388748361945433, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
+      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4902388748361945433, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
+      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetDirection
+      objectReference: {fileID: 0}
+    - target: {fileID: 4902388748361945433, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
+      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: TexasShootEm.BulletController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4902388748361945433, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
+      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_FloatArgument
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4902388748361945433, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
+      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6978460057222753240, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 3620900106843576643, guid: d996dff7a40b5a0418403502852c2fae, type: 3}
+    - target: {fileID: 6978460057222753240, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
+      propertyPath: bulletSpawn
+      value: 
+      objectReference: {fileID: 1019779637}
+    - target: {fileID: 6978460057222753240, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
+      propertyPath: setBulletDir
+      value: 
+      objectReference: {fileID: 11400000, guid: 98da88a70de487444b3c39530f3b0b5d, type: 2}
     - target: {fileID: 8460632381936193021, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5
@@ -856,8 +975,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8460632381936193021, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1019779637}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1426656208180538918, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1083123740}
   m_SourcePrefab: {fileID: 100100000, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
 --- !u!4 &617281085 stripped
 Transform:
@@ -966,6 +1091,37 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7249646444973981458, guid: 78c2c3e042bf0354f8b7d1ba9b0048db, type: 3}
   m_PrefabInstance: {fileID: 624219977}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &767356528
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 767356529}
+  m_Layer: 0
+  m_Name: BulletSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &767356529
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767356528}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.5, y: 0.182, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 401793440}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &868863587
 GameObject:
   m_ObjectHideFlags: 0
@@ -999,6 +1155,70 @@ Transform:
   - {fileID: 1234430034}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1019779636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1019779637}
+  m_Layer: 0
+  m_Name: BulletSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1019779637
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019779636}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.5, y: 0.182, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 617281085}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1083123734 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1426656208180538918, guid: 5f56873bd92cceb49a2316d39c64a71c, type: 3}
+  m_PrefabInstance: {fileID: 617281084}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1083123740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083123734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 846db8c63b964fa98a32f2478749d3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToListen: {fileID: 11400000, guid: 98da88a70de487444b3c39530f3b0b5d, type: 2}
+  onEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5254390877585672541, guid: d996dff7a40b5a0418403502852c2fae, type: 3}
+        m_TargetAssemblyTypeName: TexasShootEm.BulletController, Assembly-CSharp
+        m_MethodName: SetDirection
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: -1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1091342733
 GameObject:
   m_ObjectHideFlags: 0
