@@ -37,7 +37,6 @@ namespace TexasShootEm
             _entityAnim.SetTrigger("Shoot");
             yield return new WaitForSeconds(0.3f);
             playSfx.Invoke(entityShootSfx);
-            SpawnBullet();
             setBulletDir.Invoke(new Empty());
             yield return new WaitForSeconds(0.5f);
             entityShoot.Invoke(new Empty());

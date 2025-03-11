@@ -15,14 +15,14 @@ namespace TexasShootEm
             Destroy(this.gameObject, lifeTime);
         }
         
-        private void Update()
+        private void FixedUpdate()
         {
             _rigidbody.velocity = new Vector2(_direction * moveSpeed * Time.deltaTime, _rigidbody.velocity.y);
         }
 
         public void SetDirection(float direction)
         {
-            Debug.Log("Direction: " + direction);
+            Debug.Log("Direction: " + _direction);
             _direction = direction;
             transform.localScale = new Vector3(direction * 3, 3, 3);
         }
