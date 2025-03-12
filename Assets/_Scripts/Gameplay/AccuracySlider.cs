@@ -9,6 +9,10 @@ namespace TexasShootEm.Gameplay
         [SerializeField] private InputReader inputReader; 
         [SerializeField] private Slider accuracySlider;
         [SerializeField] private AnimationCurve lerpCurve;
+
+        [Header("Audio")]
+        [SerializeField] private AudioClipSOEvent playSfxEvent; 
+        [SerializeField] private AudioClipSO aimSound;
         
         [Header("Events")]
         [SerializeField] private FloatEvent sendScoreEvent;
@@ -71,6 +75,8 @@ namespace TexasShootEm.Gameplay
                     break;
                 }
             }
+            
+            playSfxEvent.Invoke(aimSound);
             
             sendScoreEvent.Invoke(_sliderScore); 
             _sliderActive = false;

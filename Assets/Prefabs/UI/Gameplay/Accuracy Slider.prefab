@@ -773,6 +773,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  playSfxEvent: {fileID: 11400000, guid: 60f412faab172d24ab24c015a4296c9d, type: 2}
+  aimSound: {fileID: 11400000, guid: 5e292585a45b6df4fbde61e081ab45a6, type: 2}
   sendScoreEvent: {fileID: 11400000, guid: e02f5277146a1584b8f144c74f1ed167, type: 2}
   sendTimerPenaltyEvent: {fileID: 11400000, guid: fbbe9924665f78c479ce907ba6a880ee, type: 2}
   sliderZones:
