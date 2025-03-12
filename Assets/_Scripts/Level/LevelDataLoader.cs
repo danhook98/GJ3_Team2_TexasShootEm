@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
-namespace TexasShootEm
+namespace TexasShootEm.Level
 {
     public class LevelDataLoader : MonoBehaviour
     {

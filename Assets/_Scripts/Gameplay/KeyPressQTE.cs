@@ -1,9 +1,8 @@
-using System.Collections;
 using System.Collections.Generic;
 using TexasShootEm.EventSystem;
 using UnityEngine;
 
-namespace TexasShootEm
+namespace TexasShootEm.Gameplay
 {
     public class KeyPressQTE : MonoBehaviour
     {

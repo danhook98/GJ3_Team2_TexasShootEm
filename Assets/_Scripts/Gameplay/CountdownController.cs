@@ -1,8 +1,8 @@
 using System.Collections;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
-namespace TexasShootEm
+namespace TexasShootEm.Gameplay
 {
     public class CountdownController : MonoBehaviour
     {

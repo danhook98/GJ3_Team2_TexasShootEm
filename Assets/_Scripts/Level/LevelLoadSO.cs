@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace TexasShootEm
+namespace TexasShootEm.Level
 {
     // Uncomment the below line if the instance of LevelLoadSO gets deleted. 
     //[CreateAssetMenu(menuName = "TexasShootEm/Level Load SO")]

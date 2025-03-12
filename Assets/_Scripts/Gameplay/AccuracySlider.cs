@@ -1,8 +1,8 @@
-using TexasShootEm.EventSystem;
 using UnityEngine;
 using UnityEngine.UI;
+using TexasShootEm.EventSystem;
 
-namespace TexasShootEm
+namespace TexasShootEm.Gameplay
 {
     public class AccuracySlider : MonoBehaviour
     {

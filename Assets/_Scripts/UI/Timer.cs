@@ -1,9 +1,8 @@
-using UnityEngine;
 using TexasShootEm.EventSystem;
 using TMPro;
-using UnityEngine.Serialization;
+using UnityEngine;
 
-namespace TexasShootEm
+namespace TexasShootEm.UI
 {
     public class Timer : MonoBehaviour
     {

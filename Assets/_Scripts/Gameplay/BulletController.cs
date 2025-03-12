@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace TexasShootEm
+namespace TexasShootEm.Gameplay
 {
     public class BulletController : MonoBehaviour
     {

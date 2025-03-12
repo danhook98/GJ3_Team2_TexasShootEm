@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace TexasShootEm
+namespace TexasShootEm.Gameplay
 {
     [CreateAssetMenu(menuName = "TexasShootEm/Accuracy Slider Data", fileName = "AccuracySliderData")]
     public class AccuracySliderDataSO : ScriptableObject

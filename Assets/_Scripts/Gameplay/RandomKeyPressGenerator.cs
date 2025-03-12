@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace TexasShootEm
+namespace TexasShootEm.Gameplay
 {
     public class RandomKeyPressGenerator
     {

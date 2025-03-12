@@ -1,8 +1,8 @@
-using System;
 using System.Collections;
-using TexasShootEm.EventSystem;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TexasShootEm.EventSystem;
+using TexasShootEm.Level;
 
 namespace TexasShootEm
 {

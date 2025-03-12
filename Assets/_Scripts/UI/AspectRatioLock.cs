@@ -6,7 +6,7 @@ using UnityEngine;
 //
 // https://gamedesigntheory.blogspot.com/2010/09/controlling-aspect-ratio-in-unity.html
 
-namespace TexasShootEm
+namespace TexasShootEm.UI
 {
     [RequireComponent(typeof(Camera))]
     public class AspectRatioLock : MonoBehaviour

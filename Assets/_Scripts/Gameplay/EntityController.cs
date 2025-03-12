@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using TexasShootEm.EventSystem;
 
-namespace TexasShootEm
+namespace TexasShootEm.Gameplay
 {
     public class EntityController : MonoBehaviour
     {

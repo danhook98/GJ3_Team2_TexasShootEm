@@ -1,6 +1,7 @@
+using TexasShootEm.Gameplay;
 using UnityEngine;
 
-namespace TexasShootEm
+namespace TexasShootEm.Level
 {
     [CreateAssetMenu(menuName = "TexasShootEm/Level", fileName = "Level")]
     public class LevelSO : ScriptableObject
