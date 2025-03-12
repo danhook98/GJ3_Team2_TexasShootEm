@@ -1,8 +1,8 @@
-using System;
 using System.Collections;
-using TexasShootEm.EventSystem;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TexasShootEm.EventSystem;
+using TexasShootEm.Level;
 
 namespace TexasShootEm
 {
@@ -49,6 +49,8 @@ namespace TexasShootEm
 
         private void Awake()
         {
+            Time.timeScale = 1f;
+            
             if (levelToLoad == null)
             {
                 Debug.LogWarning("<color=red>Game Manager: </color>No level to load has been assigned.");

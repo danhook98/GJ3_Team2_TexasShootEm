@@ -1,3 +1,4 @@
+using TexasShootEm.Gameplay;
 using UnityEngine;
 
 namespace TexasShootEm.EventSystem

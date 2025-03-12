@@ -47,10 +47,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputReader: {fileID: 11400000, guid: 1fca4445773370446a46be614455a663, type: 2}
+  playSfxEvent: {fileID: 11400000, guid: 60f412faab172d24ab24c015a4296c9d, type: 2}
+  clickSound: {fileID: 11400000, guid: eb1e73c51922e6c419d9190220d92cd7, type: 2}
   sendScoreEvent: {fileID: 11400000, guid: 9a19769badcd490419f1e09dbdb052c1, type: 2}
   numberOfKeysToPress: 4
   spawnPosition: {x: 1.25, y: 0.25}
-  arrowDisplayPosition: {x: 0.5, y: 0.25}
+  arrowDisplayPosition: {x: 0.5, y: 0.4}
   spaceBetween: 1.5
   arrowPrefabs:
   - {fileID: 1557382349821142633, guid: 9c9d33108ea3c844791905636cce404b, type: 3}

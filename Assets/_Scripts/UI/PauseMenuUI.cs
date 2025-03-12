@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace TexasShootEm
+namespace TexasShootEm.UI
 {
     public class PauseMenuUI : MonoBehaviour
     {
@@ -18,7 +16,7 @@ namespace TexasShootEm
         public void GoToMainMenu()
         {
             Debug.Log("Going to main menu");
-            SceneManager.LoadScene("Main Menu");
+            SceneManager.LoadScene("MainMenu");
         }
         
         public void PauseGame(bool isPaused)
