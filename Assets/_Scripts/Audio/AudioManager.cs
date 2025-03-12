@@ -63,6 +63,8 @@ namespace TexasShootEm
             
             float mixerVolume = (Mathf.Log10(volume) * 20);
             audioMixer.SetFloat(mixerGroup, mixerVolume);
+            PlayerPrefs.SetFloat("sfxVolume", mixerVolume);
+            PlayerPrefs.SetFloat("musicVolume", mixerVolume);
         }
 
         private void LoadVolume()
