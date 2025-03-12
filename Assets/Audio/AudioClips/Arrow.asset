@@ -9,16 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acd0369e9eca8ac4f8590af12f5f5e7e, type: 3}
-  m_Name: Level3Slider
+  m_Script: {fileID: 11500000, guid: bd235f5fe081b2f40bb1547f3b7cff25, type: 3}
+  m_Name: Arrow
   m_EditorClassIdentifier: 
-  sliderData:
-  - RangeStart: 0.11
-    TimePenalty: 0
-  - RangeStart: 0.26
-    TimePenalty: 0
-  - RangeStart: 0.46
-    TimePenalty: 0
-  - RangeStart: 0.91
-    TimePenalty: 0
-  PointerSpeed: 1
+  clip: {fileID: 8300000, guid: cc25e14e01d9b8943ba9ad0db3ed8730, type: 3}
