@@ -18,7 +18,7 @@ namespace TexasShootEm
         public void GoToMainMenu()
         {
             Debug.Log("Going to main menu");
-            SceneManager.LoadScene("Main Menu");
+            SceneManager.LoadScene("MainMenu");
         }
         
         public void PauseGame(bool isPaused)
