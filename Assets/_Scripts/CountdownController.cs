@@ -1,10 +1,6 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
-using UnityEngine.InputSystem.Android.LowLevel;
-using UnityEngine.UI;
+using TMPro;
 
 namespace TexasShootEm
 {
