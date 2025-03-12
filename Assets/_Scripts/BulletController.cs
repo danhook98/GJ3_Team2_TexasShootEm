@@ -17,13 +17,13 @@ namespace TexasShootEm
         
         private void FixedUpdate()
         {
-            _rigidbody.velocity = new Vector2(_direction * moveSpeed * Time.deltaTime, _rigidbody.velocity.y);
+            _rigidbody.velocity = new Vector2(_direction * moveSpeed * Time.fixedDeltaTime, _rigidbody.velocity.y);
         }
 
         public void SetDirection(bool shootRight)
         {
             _direction = shootRight ? 1 : -1;
-            //transform.localScale = new Vector3(direction * 3, 3, 3);
+            transform.localScale = new Vector3(_direction * 2, 2, 2);
         }
     }
 }
