@@ -32,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.0519, y: -0.36204, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2245202597630622045}
@@ -188,6 +188,36 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1832396623473423574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426656208180538918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000fdb2bb89
+  m_ShapePath:
+  - {x: -0.31710026, y: 0.11170705, z: 0}
+  - {x: -0.37199312, y: 0.15385246, z: 0}
+  - {x: -0.20017819, y: 0.14312887, z: 0}
+  - {x: -0.14441669, y: 0.12195349, z: 0}
+  m_ShapePathHash: 553710759
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -27908
+  m_LocalBounds:
+    m_Center: {x: -0.2582049, y: 0.13277975, z: 0}
+    m_Extent: {x: 0.11378822, y: 0.021072708, z: 0}
 --- !u!1 &3169825643593811521
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,33 +249,3 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8460632381936193021}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1832396623473423574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1426656208180538918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
-  m_ComponentVersion: 1
-  m_HasRenderer: 1
-  m_UseRendererSilhouette: 1
-  m_CastsShadows: 1
-  m_SelfShadows: 0
-  m_ApplyToSortingLayers: 00000000fdb2bb89
-  m_ShapePath:
-  - {x: -0.42918694, y: 0.01429843, z: 0}
-  - {x: -0.37199312, y: 0.15385246, z: 0}
-  - {x: -0.20017819, y: 0.14312887, z: 0}
-  - {x: -0.1644321, y: 0.01787296, z: 0}
-  m_ShapePathHash: -867347803
-  m_Mesh: {fileID: 0}
-  m_InstanceId: -7882
-  m_LocalBounds:
-    m_Center: {x: -0.29680952, y: 0.08407545, z: 0}
-    m_Extent: {x: 0.13237742, y: 0.06977702, z: 0}

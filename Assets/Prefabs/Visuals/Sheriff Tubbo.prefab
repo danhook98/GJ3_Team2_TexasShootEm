@@ -64,7 +64,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.3, y: -0.119, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2964947666400193097}
@@ -268,14 +268,14 @@ MonoBehaviour:
   m_SelfShadows: 0
   m_ApplyToSortingLayers: 00000000fdb2bb89
   m_ShapePath:
-  - {x: 0.33765233, y: 0.01227823, z: 0}
-  - {x: 0.2670523, y: 0.07826963, z: 0}
-  - {x: 0.29897362, y: 0.13304074, z: 0}
-  - {x: 0.38492152, y: 0.13304074, z: 0}
-  - {x: 0.43870446, y: 0.00920867, z: 0}
-  m_ShapePathHash: -741752189
+  - {x: 0.4835756, y: 0.10444037, z: 0}
+  - {x: 0.30161306, y: 0.14163096, z: 0}
+  - {x: 0.32777426, y: 0.19064204, z: 0}
+  - {x: 0.3964419, y: 0.19064195, z: 0}
+  - {x: 0.53854674, y: 0.16473182, z: 0}
+  m_ShapePathHash: 189603938
   m_Mesh: {fileID: 0}
-  m_InstanceId: -9210
+  m_InstanceId: -27890
   m_LocalBounds:
-    m_Center: {x: 0.3528784, y: 0.0711247, z: 0}
-    m_Extent: {x: 0.085826084, y: 0.061916035, z: 0}
+    m_Center: {x: 0.4200799, y: 0.14754121, z: 0}
+    m_Extent: {x: 0.11846684, y: 0.043100838, z: 0}
