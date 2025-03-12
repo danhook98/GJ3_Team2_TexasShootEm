@@ -8,6 +8,10 @@ namespace TexasShootEm.Gameplay
     {
         [SerializeField] private InputReader inputReader;
         
+        [Header("Audio")]
+        [SerializeField] private AudioClipSOEvent playSfxEvent;
+        [SerializeField] private AudioClipSO clickSound;
+        
         [Header("Events")]
         [SerializeField] private FloatEvent sendScoreEvent;
         
@@ -58,6 +62,8 @@ namespace TexasShootEm.Gameplay
             
             Key key = _keyGenerator.GetKeyFromDirection(input);
             float numOfKeysToPress = numberOfKeysToPress;
+            
+            playSfxEvent.Invoke(clickSound);
             
             if (key == _queuedKeys[0])
             {
