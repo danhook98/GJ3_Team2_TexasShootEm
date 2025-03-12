@@ -19,6 +19,6 @@ MonoBehaviour:
     TimePenalty: -1
   - RangeStart: 0.66
     TimePenalty: 0
-  - RangeStart: 0.91
+  - RangeStart: 0.96
     TimePenalty: 1
   PointerSpeed: 2.25
