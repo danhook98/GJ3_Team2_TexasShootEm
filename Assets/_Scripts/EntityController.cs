@@ -20,12 +20,17 @@ namespace TexasShootEm
         [SerializeField] private Transform bulletSpawn;
         [SerializeField] private BulletController bullet;
         [SerializeField] private bool shootRight = true;
+        
+        private Vector3 _deathOffset = new(0f, -0.15f, 0f);
 
+        private Transform _transform;
+        
         private Animator _entityAnim;
         private bool _isDead = false;
 
         private void Awake()
         {
+            _transform = transform;
             _entityAnim = GetComponent<Animator>();
         }
 
@@ -51,6 +56,7 @@ namespace TexasShootEm
             _isDead = true;
             Debug.Log("Starting death coroutine");
             _entityAnim.SetTrigger("Death");
+            _transform.position += _deathOffset;
             entityDeath.Invoke(new Empty());
             playSfx.Invoke(entityDeathSfx);
             yield return new WaitForSeconds(0.9f);
