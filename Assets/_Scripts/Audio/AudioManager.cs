@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Audio;
 
-namespace TexasShootEm
+namespace TexasShootEm.Audio
 {
     public class AudioManager : MonoBehaviour
     {
@@ -28,7 +28,10 @@ namespace TexasShootEm
                                  "missing. Creating a new AudioSource.");
                 musicSource = gameObject.AddComponent<AudioSource>();
             }
+        }
 
+        private void Start()
+        {
             LoadVolume();
         }
 
@@ -63,15 +66,14 @@ namespace TexasShootEm
             
             float mixerVolume = (Mathf.Log10(volume) * 20);
             audioMixer.SetFloat(mixerGroup, mixerVolume);
-            PlayerPrefs.SetFloat("sfxVolume", mixerVolume);
-            PlayerPrefs.SetFloat("musicVolume", mixerVolume);
+            PlayerPrefs.SetFloat(mixerGroup, mixerVolume);
         }
 
         private void LoadVolume()
         {
             // Load the saved volume if it exists, otherwise it defaults to 1.
-            float sfxVolume = PlayerPrefs.GetFloat("sfxVolume", 1f);
-            float musicVolume = PlayerPrefs.GetFloat("musicVolume", 1f);
+            float sfxVolume = PlayerPrefs.GetFloat("SFXParameter", 1f);
+            float musicVolume = PlayerPrefs.GetFloat("musicParameter", 1f);
             
             // Set the volume levels of the mixers.
             audioMixer.SetFloat("SFXParameter", sfxVolume);
