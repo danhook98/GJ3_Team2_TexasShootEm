@@ -21,4 +21,4 @@ MonoBehaviour:
     TimePenalty: 0
   - RangeStart: 0.91
     TimePenalty: 0
-  PointerSpeed: 0.5
+  PointerSpeed: 1
