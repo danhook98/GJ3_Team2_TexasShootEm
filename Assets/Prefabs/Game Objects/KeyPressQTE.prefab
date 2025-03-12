@@ -50,7 +50,7 @@ MonoBehaviour:
   sendScoreEvent: {fileID: 11400000, guid: 9a19769badcd490419f1e09dbdb052c1, type: 2}
   numberOfKeysToPress: 4
   spawnPosition: {x: 1.25, y: 0.25}
-  arrowDisplayPosition: {x: 0.5, y: 0.25}
+  arrowDisplayPosition: {x: 0.5, y: 0.4}
   spaceBetween: 1.5
   arrowPrefabs:
   - {fileID: 1557382349821142633, guid: 9c9d33108ea3c844791905636cce404b, type: 3}
